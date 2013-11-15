@@ -1,8 +1,8 @@
-kdevplatform (1.5.60~0.1~git20131027+r7091-0daily7~ubuntu13.10.1) saucy; urgency=low
+kdevplatform (1.5.80-0ubuntu0.1~aroth~ppa1) saucy; urgency=low
 
-  * Auto build.
+  * build kdevplatform 1.6 Beta 1
 
- -- Andreas Roth <aroth@arsoft-online.com>  Sun, 27 Oct 2013 14:09:13 +0000
+ -- Andreas Roth <aroth@arsoft-online.com>  Fri, 15 Nov 2013 07:45:35 +0100
 
 kdevplatform (1.5.60-0ubuntu2) raring; urgency=low
 
