@@ -1,0 +1,3 @@
+# bzr-builder format 0.3 deb-version {debupstream}~0.1~git20131027+r7091-0daily7
+lp:~kdevelop/kdevplatform/master revid:git-v1:1dd33cd4579aa0fe76e85b40bd6d9e9cd34a7c34
+nest packaging lp:~aroth/kdevplatform/daily debian revid:aroth@ar.arsoft.dyndns.dk-20130904050639-kmm21af96hl63phb
