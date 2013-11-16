@@ -1,0 +1,267 @@
+diff --git a/language/duchain/builders/abstracttypebuilder.h b/language/duchain/builders/abstracttypebuilder.h
+index 1c01a57..098f654 100644
+--- a/language/duchain/builders/abstracttypebuilder.h
++++ b/language/duchain/builders/abstracttypebuilder.h
+@@ -171,7 +171,14 @@ protected:
+    *
+    * \returns the current abstract type being parsed.
+    */
+-  inline KDevelop::AbstractType::Ptr currentAbstractType() { return m_typeStack.top(); }
++  inline KDevelop::AbstractType::Ptr currentAbstractType()
++  {
++    if (m_typeStack.isEmpty()) {
++      return AbstractType::Ptr();
++    } else {
++      return m_typeStack.top();
++    }
++  }
+ 
+   /**
+    * Retrieve the current type being parsed.
+@@ -181,7 +188,7 @@ protected:
+    * \returns the current type being parsed.
+    */
+   template <class T2>
+-  TypePtr<T2> currentType() { return TypePtr<T2>::dynamicCast(m_typeStack.top()); }
++  TypePtr<T2> currentType() { return currentAbstractType().template cast<T2>(); }
+ 
+   /**
+    * Search for a type with the identifier given by \a name.
+diff --git a/language/duchain/indexedstring.h b/language/duchain/indexedstring.h
+index 9741fff..a36fcf8 100644
+--- a/language/duchain/indexedstring.h
++++ b/language/duchain/indexedstring.h
+@@ -25,10 +25,6 @@
+ class KUrl;
+ 
+ namespace KDevelop {
+-class IndexedString;
+-}
+-
+-namespace KDevelop {
+ 
+ /**
+  * This string does "disk reference-counting", which means that reference-counts are maintainted,
+diff --git a/plugins/codeutils/kdevcodeutils.desktop.cmake b/plugins/codeutils/kdevcodeutils.desktop.cmake
+index 6be5226..1e86c4a 100644
+--- a/plugins/codeutils/kdevcodeutils.desktop.cmake
++++ b/plugins/codeutils/kdevcodeutils.desktop.cmake
+@@ -2,7 +2,7 @@
+ Type=Service
+ Comment=Collection of various utilities that increase productivity while programming.
+ Comment[bs]=Kolekcija raznih alata koji povećavaju produktivnost tokom programiranja.
+-Comment[ca]=Col·lecció de diverses utilitzats que augmenten la productivitat en programació.
++Comment[ca]=Col·lecció de diverses utilitzats que augmenten la productivitat durant la programació.
+ Comment[ca@valencia]=Col·lecció de diverses utilitzats que augmenten la productivitat en programació.
+ Comment[da]=Samling af diverse værktøjer til at forøge produktiviteten når du programmerer.
+ Comment[de]=Sammlung verschiedener Werkzeuge, die die Produktivität während des Programmierens erhöhen.
+diff --git a/plugins/execute/kdevexecute.desktop.cmake b/plugins/execute/kdevexecute.desktop.cmake
+index c9b8f9f..f17e273 100644
+--- a/plugins/execute/kdevexecute.desktop.cmake
++++ b/plugins/execute/kdevexecute.desktop.cmake
+@@ -5,7 +5,7 @@ Exec=blubb
+ Comment=This plugin allows running of programs with no instrumentor, ie. natively by the current host.
+ Comment[bg]=Тaзи приставка позволява изпълнение на програмата без основния модул, т.е. локално на текущата машина.
+ Comment[bs]=Ovaj dodatak omogučava pokretanje programa bez instrumentora, tj. koristeći mogučnosti trenutnog računara.
+-Comment[ca]=Aquest connector permet executar programes sense «instrumentor», és a dir, nativament per l'amfitrió actual.
++Comment[ca]=Aquest connector permet executar programes sense «instrumentor», és a dir, nativament per a l'amfitrió actual.
+ Comment[ca@valencia]=Este connector permet executar programes sense «instrumentor», és a dir, nativament per l'amfitrió actual.
+ Comment[da]=Dette plugin tillader kørsel af programmer uden instrumentor dvs. nativt på det nuværende system.
+ Comment[de]=Dieses Modul erlaubt das Ausführen von Programmen im Kontext des Betriebssystems.
+diff --git a/plugins/filemanager/kdevfilemanager.desktop.cmake b/plugins/filemanager/kdevfilemanager.desktop.cmake
+index c96b37f..c6f9d94 100644
+--- a/plugins/filemanager/kdevfilemanager.desktop.cmake
++++ b/plugins/filemanager/kdevfilemanager.desktop.cmake
+@@ -5,7 +5,7 @@ Exec=blubb
+ Comment=This plugin brings a filemanager to KDevelop.
+ Comment[bg]=Тaзи приставка вгражда файловия манипулатор към KDevelop.
+ Comment[bs]=Dodatak donosi menadžer datoteka KDevelopu.
+-Comment[ca]=Aquest connector proporciona un gestor de fitxers a KDevelop.
++Comment[ca]=Aquest connector proporciona un gestor de fitxers al KDevelop.
+ Comment[ca@valencia]=Este connector proporciona un gestor de fitxers a KDevelop.
+ Comment[da]=Dette plugin bringer filhåndtering til KDevelop.
+ Comment[de]=Dieses Modul integriert einen Datei-Browser in KDevelop.
+diff --git a/plugins/filetemplates/CMakeLists.txt b/plugins/filetemplates/CMakeLists.txt
+index 6e199ef..0cbf0e8 100644
+--- a/plugins/filetemplates/CMakeLists.txt
++++ b/plugins/filetemplates/CMakeLists.txt
+@@ -52,6 +52,7 @@ install(FILES
+ licenses/GPL\ v2
+ licenses/GPL\ v3
+ licenses/LGPL\ v2
++licenses/LGPL\ v3
+ licenses/Apache\ v2
+ licenses/BSD
+ licenses/Boost
+diff --git a/plugins/filetemplates/licenses/LGPL v3 b/plugins/filetemplates/licenses/LGPL v3
+new file mode 100644
+index 0000000..58116db
+--- /dev/null
++++ b/plugins/filetemplates/licenses/LGPL v3	
+@@ -0,0 +1,15 @@
++<one line to give the library's name and an idea of what it does.>
++Copyright (C) <year>  <copyright holder>
++
++This program is free software: you can redistribute it and/or modify
++it under the terms of the GNU General Public License as published by
++the Free Software Foundation, either version 3 of the License, or
++(at your option) any later version.
++
++This program is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++GNU General Public License for more details.
++
++You should have received a copy of the GNU General Public License
++along with this program.  If not, see <http://www.gnu.org/licenses/>.
+diff --git a/plugins/genericprojectmanager/kdevgenericmanager.desktop.cmake b/plugins/genericprojectmanager/kdevgenericmanager.desktop.cmake
+index 3cf8e64..c2721ce 100644
+--- a/plugins/genericprojectmanager/kdevgenericmanager.desktop.cmake
++++ b/plugins/genericprojectmanager/kdevgenericmanager.desktop.cmake
+@@ -78,7 +78,7 @@ GenericName[zh_TW]=專案管理員
+ Comment=Allow KDevelop to manage generic projects
+ Comment[bg]=Рарешаване на KDevelop обобщено манипулиране на проекти
+ Comment[bs]=Dopusti KDevelopu da upravlja generičkim projektima
+-Comment[ca]=Permet a KDevelop gestionar projectes genèrics
++Comment[ca]=Permet al KDevelop gestionar projectes genèrics
+ Comment[ca@valencia]=Permet a KDevelop gestionar projectes genèrics
+ Comment[da]=Lader KDevelop håndtere generiske projekter
+ Comment[de]=Zum Verwalten allgemeiner Projekte in KDevelop
+diff --git a/plugins/konsole/kdevkonsoleview.desktop.cmake b/plugins/konsole/kdevkonsoleview.desktop.cmake
+index 9e984f1..962fad5 100644
+--- a/plugins/konsole/kdevkonsoleview.desktop.cmake
++++ b/plugins/konsole/kdevkonsoleview.desktop.cmake
+@@ -4,7 +4,7 @@ Exec=blubb
+ Comment=This plugin provides KDevelop with an embedded konsole for quick and easy command line access.
+ Comment[bg]=Тaзи приставка осигурява на KDevelop вградена конзола за лесен достъп от команден ред.
+ Comment[bs]=Ovaj dodatak obezbjeđuje KDvelop sa ugrađenom konzolom za brz i lahak pristup komandnoj liniji.
+-Comment[ca]=Aquest connector proporciona a KDevelop un Konsole incrustat per accedir de manera ràpida i fàcil a la línia d'ordres.
++Comment[ca]=Aquest connector proporciona al KDevelop un Konsole incrustat per accedir de manera ràpida i fàcil a la línia d'ordres.
+ Comment[ca@valencia]=Este connector proporciona a KDevelop un Konsole incrustat per accedir de manera ràpida i fàcil a la línia d'ordes.
+ Comment[da]=Dette plugin giver KDevelop en indlejret konsol for hurtig og nem kommandolinje adgang.
+ Comment[de]=Dieses Modul stattet KDevelop mit einer eingebetteten Konsole zum einfachen Zugriff auf die Befehlszeile aus.
+diff --git a/plugins/openwith/kdevopenwith.desktop.cmake b/plugins/openwith/kdevopenwith.desktop.cmake
+index ecd3770..d0cbdce 100644
+--- a/plugins/openwith/kdevopenwith.desktop.cmake
++++ b/plugins/openwith/kdevopenwith.desktop.cmake
+@@ -5,7 +5,7 @@ Exec=blubb
+ Comment=This plugin allows to open files with associated external applications.
+ Comment[bg]=Тази приставка позволява отваряне на файлове със съответни външни програми.
+ Comment[bs]=Ovaj dodatak dopušta otvaranje datoteka sa povezanim eksternim aplikacijama.
+-Comment[ca]=Aquest connector permet obrir fitxers amb aplicacions externes associades.
++Comment[ca]=Aquest connector permet obrir fitxers amb les aplicacions externes associades.
+ Comment[ca@valencia]=Este connector permet obrir fitxers amb aplicacions externes associades.
+ Comment[da]=Dette plugin tillader at åbne filer med associerede eksterne applikationer.
+ Comment[de]=Mit diesem Modul können Dateien mit ihnen zugewiesenen externen Anwendungen gestartet werden.
+diff --git a/plugins/projectfilter/kcm_kdevprojectfilter.desktop b/plugins/projectfilter/kcm_kdevprojectfilter.desktop
+index 0fead6e..9d8b5f2 100644
+--- a/plugins/projectfilter/kcm_kdevprojectfilter.desktop
++++ b/plugins/projectfilter/kcm_kdevprojectfilter.desktop
+@@ -11,6 +11,8 @@ X-KDE-ParentComponents=KDevProjectFilter
+ X-KDE-CfgDlgHierarchy=GENERAL
+ 
+ Name=Project Filter
++Name[bs]=Projekt Filter
++Name[ca]=Filtre de projecte
+ Name[cs]=Filtr projektů
+ Name[de]=Projektfilter
+ Name[es]=Filtro del proyecto
+@@ -19,23 +21,29 @@ Name[fr]=Filtre de projet
+ Name[gl]=Filtro do proxecto
+ Name[hu]=Projektszűrő
+ Name[it]=Filtro progetto
++Name[kk]=Жоба сүзгісі
+ Name[nl]=Projectfilter
+ Name[pt]=Filtro de Projectos
+ Name[pt_BR]=Filtro de projetos
++Name[sk]=Filter projektu
+ Name[sl]=Filter projektov
+ Name[sv]=Projektfilter
+ Name[uk]=Фільтр проекту
+ Name[x-test]=xxProject Filterxx
+ Name[zh_TW]=專案過濾器
+ Comment=Configure which files and folders inside the project folder should be included or excluded.
++Comment[bs]=Konfiguriši koje datoteke i direktoriji unutar projekta trebaju biti uključeni ili isključeni.
++Comment[ca]=Configura quins fitxers i carpetes dins de la carpeta del projecte s'han d'incloure o excloure.
+ Comment[de]=Legt fest, welche Dateien und Ordner innerhalb des Projektordners ein- oder ausgeschlossen werden sollen.
+ Comment[es]=Configura qué archivos y carpetas contenidos en la carpeta del proyecto se deben incluir o excluir.
+ Comment[fr]=Configure quels fichiers et dossier au sein du projet doivent être inclus ou exclus.
+ Comment[gl]=Configurar cales ficheiros e cartafoles dentro do cartafol do proxecto deben incluírse ou excluírse.
+ Comment[it]=Configura quali file e cartelle nella cartella del progetto devono essere incluse o escluse.
++Comment[kk]=Жоба қапшығындағы қай файлдар мен қапшықтарды есепке кіргізу қайсын кіргізбеу керек.
+ Comment[nl]=Stel in welke bestanden en mappen in de projectmap meegenomen of uitgesloten moeten worden.
+ Comment[pt]=Configura os ficheiros e pastas, dentro da pasta do projecto, que devem ser incluídos ou excluídos.
+ Comment[pt_BR]=Configura os arquivos e pastas, dentro da pasta do projeto, que devem ser incluídos ou excluídos.
++Comment[sk]=Nastaviť, ktoré súbory a priečinky v priečinku projektu majú byť zahrnuté alebo vylúčené.
+ Comment[sl]=Nastavi katere datoteke in mape znotraj mape projekta naj bodo vključene ali izključene.
+ Comment[sv]=Anpassa vilka filer och kataloger inne i projektkatalogen som ska inkluderas eller exkluderas.
+ Comment[uk]=За допомогою цього модуля можна визначити, які файли і теки у теці проекту має бути включено або виключено з його складу.
+diff --git a/plugins/projectfilter/kdevprojectfilter.desktop.cmake b/plugins/projectfilter/kdevprojectfilter.desktop.cmake
+index d704816..4733dc7 100644
+--- a/plugins/projectfilter/kdevprojectfilter.desktop.cmake
++++ b/plugins/projectfilter/kdevprojectfilter.desktop.cmake
+@@ -16,6 +16,8 @@ X-KDevelop-Mode=GUI
+ X-KDevelop-LoadMode=AlwaysOn
+ 
+ Name=Project Filter
++Name[bs]=Projekt Filter
++Name[ca]=Filtre de projecte
+ Name[cs]=Filtr projektů
+ Name[de]=Projektfilter
+ Name[es]=Filtro del proyecto
+@@ -24,23 +26,29 @@ Name[fr]=Filtre de projet
+ Name[gl]=Filtro do proxecto
+ Name[hu]=Projektszűrő
+ Name[it]=Filtro progetto
++Name[kk]=Жоба сүзгісі
+ Name[nl]=Projectfilter
+ Name[pt]=Filtro de Projectos
+ Name[pt_BR]=Filtro de projetos
++Name[sk]=Filter projektu
+ Name[sl]=Filter projektov
+ Name[sv]=Projektfilter
+ Name[uk]=Фільтр проекту
+ Name[x-test]=xxProject Filterxx
+ Name[zh_TW]=專案過濾器
+ Comment=Configure which files and folders inside the project folder should be included or excluded.
++Comment[bs]=Konfiguriši koje datoteke i direktoriji unutar projekta trebaju biti uključeni ili isključeni.
++Comment[ca]=Configura quins fitxers i carpetes dins de la carpeta del projecte s'han d'incloure o excloure.
+ Comment[de]=Legt fest, welche Dateien und Ordner innerhalb des Projektordners ein- oder ausgeschlossen werden sollen.
+ Comment[es]=Configura qué archivos y carpetas contenidos en la carpeta del proyecto se deben incluir o excluir.
+ Comment[fr]=Configure quels fichiers et dossier au sein du projet doivent être inclus ou exclus.
+ Comment[gl]=Configurar cales ficheiros e cartafoles dentro do cartafol do proxecto deben incluírse ou excluírse.
+ Comment[it]=Configura quali file e cartelle nella cartella del progetto devono essere incluse o escluse.
++Comment[kk]=Жоба қапшығындағы қай файлдар мен қапшықтарды есепке кіргізу қайсын кіргізбеу керек.
+ Comment[nl]=Stel in welke bestanden en mappen in de projectmap meegenomen of uitgesloten moeten worden.
+ Comment[pt]=Configura os ficheiros e pastas, dentro da pasta do projecto, que devem ser incluídos ou excluídos.
+ Comment[pt_BR]=Configura os arquivos e pastas, dentro da pasta do projeto, que devem ser incluídos ou excluídos.
++Comment[sk]=Nastaviť, ktoré súbory a priečinky v priečinku projektu majú byť zahrnuté alebo vylúčené.
+ Comment[sl]=Nastavi katere datoteke in mape znotraj mape projekta naj bodo vključene ali izključene.
+ Comment[sv]=Anpassa vilka filer och kataloger inne i projektkatalogen som ska inkluderas eller exkluderas.
+ Comment[uk]=За допомогою цього модуля можна визначити, які файли і теки у теці проекту має бути включено або виключено з його складу.
+diff --git a/plugins/snippet/kdevsnippet.desktop.cmake b/plugins/snippet/kdevsnippet.desktop.cmake
+index f679dc2..95ccd95 100644
+--- a/plugins/snippet/kdevsnippet.desktop.cmake
++++ b/plugins/snippet/kdevsnippet.desktop.cmake
+@@ -5,7 +5,7 @@ Icon=edit-copy
+ Comment=This plugin allows to store code snippets and insert them into open files
+ Comment[bg]=Тази приставка позволява съхраняването на временни фрагменти от програмни низове и вмъкването им в отворени файлове
+ Comment[bs]=Ovaj dodatak omogućava da sačuvate isječke koda i unesete ih u otvorenu datoteku.
+-Comment[ca]=Aquest connector permet desar retalls de codi i inserir-los a fitxers oberts
++Comment[ca]=Aquest connector permet desar retalls de codi i inserir-los als fitxers oberts
+ Comment[ca@valencia]=Este connector permet guardar retalls de codi i inserir-los a fitxers oberts
+ Comment[da]=Dette plugin tillader at gemme kodestumper og indsætte dem i åbne filer
+ Comment[de]=Dieses Modul bietet die Möglichkeit, Textbausteine zu speichern und in geöffnete Dateien einzufügen.
+diff --git a/shell/openprojectdialog.cpp b/shell/openprojectdialog.cpp
+index 3303300..a4b3e25 100644
+--- a/shell/openprojectdialog.cpp
++++ b/shell/openprojectdialog.cpp
+@@ -63,7 +63,7 @@ OpenProjectDialog::OpenProjectDialog( bool fetch, const KUrl& startUrl, QWidget*
+         currentPage = openPage;
+     }
+ 
+-    QWidget* page = new ProjectInfoPage( this );
++    ProjectInfoPage* page = new ProjectInfoPage( this );
+     connect( page, SIGNAL(projectNameChanged(QString)), this, SLOT(validateProjectName(QString)) );
+     connect( page, SIGNAL(projectManagerChanged(QString)), this, SLOT(validateProjectManager(QString)) );
+     projectInfoPage = addPage( page, i18n("Project Information") );
