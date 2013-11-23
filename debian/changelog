@@ -1,3 +1,9 @@
+kdevplatform (1.5.80-0ubuntu0.3+git50fa2d22693238861f85dbdb183c860757887256~aroth~ppa4) UNRELEASED; urgency=low
+
+  * drop dashboard plugins
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sat, 23 Nov 2013 09:22:06 +0100
+
 kdevplatform (1.5.80-0ubuntu0.3+git50fa2d22693238861f85dbdb183c860757887256~aroth~ppa3) saucy; urgency=low
 
   * integrate 6b7972095c40db1b7879f36c4fe85947937efaf7
