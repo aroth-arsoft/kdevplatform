@@ -1,4 +1,5 @@
 
+
 usr/bin/kdev_dbus_socket_transformer
 usr/bin/kdev_format_source
 usr/bin/kdevplatform_shell_environment.sh
@@ -6,9 +7,10 @@ usr/lib/kde4/kcm_kdev_bgsettings.so
 usr/lib/kde4/kcm_kdev_ccsettings.so
 usr/lib/kde4/kcm_kdev_envsettings.so
 usr/lib/kde4/kcm_kdev_pluginsettings.so
+usr/lib/kde4/kcm_kdevprojectfilter.so
 usr/lib/kde4/kcm_kdev_projectsettings.so
-usr/lib/kde4/kcm_kdev_uisettings.so
 usr/lib/kde4/kcm_kdevsourceformattersettings.so
+usr/lib/kde4/kcm_kdev_uisettings.so
 usr/lib/kde4/kdevappwizard.so
 usr/lib/kde4/kdevclassbrowser.so
 usr/lib/kde4/kdevcodeutils.so
@@ -16,8 +18,8 @@ usr/lib/kde4/kdevcontextbrowser.so
 usr/lib/kde4/kdevcvs.so
 usr/lib/kde4/kdevdocumentswitcher.so
 usr/lib/kde4/kdevdocumentview.so
-usr/lib/kde4/kdevexecute.so
 usr/lib/kde4/kdevexecutescript.so
+usr/lib/kde4/kdevexecute.so
 usr/lib/kde4/kdevexternalscript.so
 usr/lib/kde4/kdevfilemanager.so
 usr/lib/kde4/kdevfiletemplates.so
@@ -29,6 +31,7 @@ usr/lib/kde4/kdevopenwith.so
 usr/lib/kde4/kdevpastebin.so
 usr/lib/kde4/kdevpatchreview.so
 usr/lib/kde4/kdevproblemreporter.so
+usr/lib/kde4/kdevprojectfilter.so
 usr/lib/kde4/kdevprojectmanagerview.so
 usr/lib/kde4/kdevquickopen.so
 usr/lib/kde4/kdevreviewboard.so
@@ -38,6 +41,7 @@ usr/lib/kde4/kdevswitchtobuddy.so
 usr/lib/kde4/kdevtemplatemanager_config.so
 usr/lib/kde4/kdevtestview.so
 usr/lib/kde4/kdevvcschangesviewplugin.so
+usr/lib/kde4/plugins/grantlee/0.4/kdev_filters.so
 usr/lib/libkdevplatformdebugger.so.7*
 usr/lib/libkdevplatformdocumentation.so.7*
 usr/lib/libkdevplatforminterfaces.so.7*
@@ -93,9 +97,10 @@ usr/share/kde4/services/kcm_kdev_bgsettings.desktop
 usr/share/kde4/services/kcm_kdev_ccsettings.desktop
 usr/share/kde4/services/kcm_kdev_envsettings.desktop
 usr/share/kde4/services/kcm_kdev_pluginsettings.desktop
+usr/share/kde4/services/kcm_kdevprojectfilter.desktop
 usr/share/kde4/services/kcm_kdev_projectsettings.desktop
-usr/share/kde4/services/kcm_kdev_uisettings.desktop
 usr/share/kde4/services/kcm_kdevsourceformattersettings.desktop
+usr/share/kde4/services/kcm_kdev_uisettings.desktop
 usr/share/kde4/services/kdevappwizard.desktop
 usr/share/kde4/services/kdevclassbrowser.desktop
 usr/share/kde4/services/kdevcodeutils.desktop
@@ -116,6 +121,7 @@ usr/share/kde4/services/kdevopenwith.desktop
 usr/share/kde4/services/kdevpastebin.desktop
 usr/share/kde4/services/kdevpatchreview.desktop
 usr/share/kde4/services/kdevproblemreporter.desktop
+usr/share/kde4/services/kdevprojectfilter.desktop
 usr/share/kde4/services/kdevprojectmanagerview.desktop
 usr/share/kde4/services/kdevquickopen.desktop
 usr/share/kde4/services/kdevreviewboard.desktop

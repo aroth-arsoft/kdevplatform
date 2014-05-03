@@ -1,1 +1,3 @@
-kdevplatform-1.6+git6b7972095c40db1b7879f36c4fe85947937efaf7
+11_disable_examples_tests.diff
+excludeSvnPluginFromCompilation.diff
+1.6+git19fa3c8.diff

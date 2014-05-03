@@ -1,3 +1,24 @@
+kdevplatform (1.6.0-0ubuntu1.1+git19fa3c8) trusty; urgency=medium
+
+  * backport latest upstream changes
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sat, 03 May 2014 09:17:14 +0200
+
+kdevplatform (1.6.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release (LP: #1259220)
+  * Update install files
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 09 Dec 2013 17:24:43 +0100
+
+kdevplatform (1.5.2-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+  * Update watch file to use xz instead of bz2
+  * Update install files
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 04 Nov 2013 15:42:30 +0100
+
 kdevplatform (1.5.80-0ubuntu0.3+git50fa2d22693238861f85dbdb183c860757887256~aroth~ppa4) UNRELEASED; urgency=low
 
   * drop dashboard plugins
@@ -29,7 +50,7 @@ kdevplatform (1.5.60-0ubuntu2) raring; urgency=low
 
  -- Andreas Roth <aroth@arsoft-online.com>  Mon, 19 Aug 2013 23:21:47 +0200
 
-kdevplatform (1.5.1-0ubuntu1) raring; urgency=low
+kdevplatform (1.5.1-0ubuntu1) saucy; urgency=low
 
   * New upstream release
   * Merge with Debian git packaging, remaining change
