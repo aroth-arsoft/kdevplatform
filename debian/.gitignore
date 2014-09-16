@@ -1,0 +1,9 @@
+*.debhelper.log
+*.substvars
+/files
+stamp-*
+/tmp/
+/man/
+/kdevplatform*/
+/libsublime*/
+*.post*.debhelper
