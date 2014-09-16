@@ -1,0 +1,38 @@
+--- a/language/duchain/identifier.h
++++ b/language/duchain/identifier.h
+@@ -24,7 +24,15 @@
+ #include <QtCore/QStringList>
+ #include <QtCore/QMetaType>
+ #include <util/kdevvarlengtharray.h>
+-#include <config-kdevplatform.h>
++#include <qglobal.h>
++
++#ifndef Q_DECL_NOEXCEPT
++#ifdef Q_OS_WIN
++#define Q_DECL_NOEXCEPT
++#else
++#define Q_DECL_NOEXCEPT noexcept
++#endif
++#endif
+ 
+ #include "../languageexport.h"
+ #include "referencecounting.h"
+--- a/language/duchain/indexedstring.h
++++ b/language/duchain/indexedstring.h
+@@ -16,7 +16,15 @@
+ 
+ //krazy:excludeall=dpointer,inline
+ 
+-#include <config-kdevplatform.h>
++#include <qglobal.h>
++
++#ifndef Q_DECL_NOEXCEPT
++#ifdef Q_OS_WIN
++#define Q_DECL_NOEXCEPT
++#else
++#define Q_DECL_NOEXCEPT noexcept
++#endif
++#endif
+ 
+ #include <QtCore/QMetaType>
+ 

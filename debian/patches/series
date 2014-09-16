@@ -1,2 +1,3 @@
+missing_config_kdevplatform_h
 11_disable_examples_tests.diff
 excludeSvnPluginFromCompilation.diff
