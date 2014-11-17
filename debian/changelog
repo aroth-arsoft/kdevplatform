@@ -1,3 +1,9 @@
+kdevplatform (1.7.0-2ubuntu1.1+git36f0cd0) utopic; urgency=medium
+
+  * integrate latest changes from branch 1.7
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Mon, 17 Nov 2014 18:54:31 +0100
+
 kdevplatform (1.7.0-2ubuntu1) vivid; urgency=low
 
   * Merge from Debian unstable.  Remaining changes:
