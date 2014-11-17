@@ -26,16 +26,19 @@ Files: documentation/documentationview.cpp
        interfaces/idocumentationcontroller.h
        interfaces/ipatchsource.cpp
        interfaces/ipatchsource.h
+       language/assistant/renameaction.cpp
+       language/assistant/renameaction.h
+       language/assistant/renameassistant.cpp
+       language/assistant/renameassistant.h
+       language/assistant/renamefileaction.cpp
+       language/assistant/renamefileaction.h
+       language/assistant/staticassistant.cpp
+       language/assistant/staticassistant.h
+       language/assistant/staticassistantsmanager.cpp
+       language/assistant/staticassistantsmanager.h
        language/backgroundparser/parseprojectjob.cpp
        language/backgroundparser/parseprojectjob.h
-       language/checks/controlflowgraph.cpp
-       language/checks/controlflowgraph.h
-       language/checks/controlflownode.cpp
-       language/checks/controlflownode.h
-       language/checks/dataaccess.cpp
-       language/checks/dataaccess.h
-       language/checks/dataaccessrepository.cpp
-       language/checks/dataaccessrepository.h
+       language/checks/*
        language/codecompletion/codecompletioncontext.cpp
        language/codecompletion/codecompletioncontext.h
        language/codecompletion/codecompletionhelper.cpp
@@ -66,25 +69,23 @@ Files: documentation/documentationview.cpp
        language/duchain/classfunctiondeclaration.cpp
        language/duchain/classfunctiondeclaration.h
        language/duchain/classmemberdeclaration.cpp
-       language/duchain/classmemberdeclarationdata.h
        language/duchain/classmemberdeclaration.h
+       language/duchain/classmemberdeclarationdata.h
        language/duchain/codemodel.cpp
        language/duchain/codemodel.h
        language/duchain/declaration.cpp
-       language/duchain/declarationdata.h
        language/duchain/declaration.h
+       language/duchain/declarationdata.h
        language/duchain/declarationid.cpp
        language/duchain/declarationid.h
        language/duchain/definitions.cpp
        language/duchain/definitions.h
-       language/duchain/duchainbase.cpp
-       language/duchain/duchainbase.h
        language/duchain/duchain.cpp
        language/duchain/duchain.h
+       language/duchain/duchainbase.cpp
+       language/duchain/duchainbase.h
        language/duchain/duchainlock.cpp
        language/duchain/duchainlock.h
-       language/duchain/duchainobserver.cpp
-       language/duchain/duchainobserver.h
        language/duchain/duchainpointer.cpp
        language/duchain/duchainpointer.h
        language/duchain/duchainregister.cpp
@@ -117,41 +118,21 @@ Files: documentation/documentationview.cpp
        language/duchain/localindexedducontext.h
        language/duchain/namespacealiasdeclaration.cpp
        language/duchain/namespacealiasdeclaration.h
-       language/duchain/navigation/abstractdeclarationnavigationcontext.cpp
-       language/duchain/navigation/abstractdeclarationnavigationcontext.h
-       language/duchain/navigation/abstractincludenavigationcontext.cpp
-       language/duchain/navigation/abstractincludenavigationcontext.h
-       language/duchain/navigation/abstractnavigationcontext.cpp
-       language/duchain/navigation/abstractnavigationcontext.h
-       language/duchain/navigation/abstractnavigationwidget.cpp
-       language/duchain/navigation/abstractnavigationwidget.h
-       language/duchain/navigation/navigationaction.h
-       language/duchain/navigation/problemnavigationcontext.cpp
-       language/duchain/navigation/problemnavigationcontext.h
-       language/duchain/navigation/usescollector.cpp
-       language/duchain/navigation/usescollector.h
-       language/duchain/navigation/usesnavigationcontext.cpp
-       language/duchain/navigation/usesnavigationcontext.h
-       language/duchain/navigation/useswidget.cpp
-       language/duchain/navigation/useswidget.h
+       language/duchain/navigation/*
        language/duchain/parsingenvironment.cpp
        language/duchain/parsingenvironment.h
        language/duchain/persistentsetmap.h
        language/duchain/persistentsymboltable.cpp
        language/duchain/persistentsymboltable.h
-       language/duchain/repositories/itemrepository.cpp
-       language/duchain/repositories/itemrepository.h
-       language/duchain/repositories/stringrepository.h
-       language/duchain/repositories/typerepository.cpp
-       language/duchain/repositories/typerepository.h
+       language/duchain/repositories/*
        language/duchain/specializationstore.cpp
        language/duchain/specializationstore.h
        language/duchain/stringhelpers.cpp
        language/duchain/stringhelpers.h
        language/duchain/topducontext.cpp
+       language/duchain/topducontext.h
        language/duchain/topducontextdynamicdata.cpp
        language/duchain/topducontextdynamicdata.h
-       language/duchain/topducontext.h
        language/duchain/topducontextutils.h
        language/duchain/types/abstracttype.cpp
        language/duchain/types/abstracttype.h
@@ -185,8 +166,8 @@ Files: documentation/documentationview.cpp
        language/duchain/types/typeregister.cpp
        language/duchain/types/typeregister.h
        language/duchain/types/typesystem.cpp
-       language/duchain/types/typesystemdata.h
        language/duchain/types/typesystem.h
+       language/duchain/types/typesystemdata.h
        language/duchain/types/typeutils.cpp
        language/duchain/types/typeutils.h
        language/duchain/types/unsuretype.cpp
@@ -211,6 +192,7 @@ Files: documentation/documentationview.cpp
        language/interfaces/iastcontainer.cpp
        language/interfaces/iastcontainer.h
        language/util/debuglanguageparserhelper.h
+       language/util/kdevhash.h
        language/util/includeitem.cpp
        language/util/includeitem.h
        language/util/navigationtooltip.cpp
@@ -226,8 +208,6 @@ Files: documentation/documentationview.cpp
        plugins/filetemplates/outputpage.h
        plugins/filetemplates/overridespage.cpp
        plugins/filetemplates/overridespage.h
-       plugins/quickopen/customlistquickopen.cpp
-       plugins/quickopen/customlistquickopen.h
        plugins/quickopen/declarationlistquickopen.cpp
        plugins/quickopen/declarationlistquickopen.h
        plugins/quickopen/duchainitemquickopen.cpp
@@ -240,10 +220,10 @@ Files: documentation/documentationview.cpp
        plugins/quickopen/quickopenmodel.h
        shell/assistantpopup.cpp
        shell/assistantpopup.h
+       shell/assistantpopup.qml
+       shell/AssistantButton.qml
        shell/documentationcontroller.cpp
        shell/documentationcontroller.h
-       shell/patchdocument.cpp
-       sublime/blur.h
        sublime/holdupdates.cpp
        sublime/holdupdates.h
        tests/json/declarationvalidator.cpp
@@ -254,38 +234,42 @@ Files: documentation/documentationview.cpp
        tests/json/jsonducontexttests.h
        tests/json/jsontesthelpers.h
        tests/json/jsontypetests.h
+       tests/json/testsuite.cpp
        tests/json/testsuite.h
-       tests/testfile.cpp
-       tests/testfile.h
        tests/modeltest.cpp
        tests/modeltest.h
+       tests/testfile.cpp
+       tests/testfile.h
        util/convenientfreelist.h
        util/embeddedfreetree.h
        util/focusedtreeview.cpp
        util/ksharedobject.h
        util/pushvalue.h
-       util/tests/test_embeddedfreetree.cpp
-       util/tests/test_kdevvarlengtharray.cpp
-       vcs/models/projectchangesmodel.cpp
-       vcs/models/projectchangesmodel.h
+       util/tests/*
        vcs/widgets/vcsdiffpatchsources.cpp
        vcs/widgets/vcsdiffpatchsources.h
 Copyright: 2002 Anders Lund <anders.lund@lund.tdcadsl.dk>
            2002-2006 Roberto Raggi <roberto@kdevelop.org>
            2006 Adam Treat <treat@kde.org>
            2006-2008 Hamish Rodda <rodda@kde.org>
-           2006-2010 David Nolden <david.nolden.kdevelop@art-master.de>
+           2006-2010 David Nolden <david.nolden.kdevelop@art-master.de>, david.nolden@kdevelop.org>
            2007 Bernd Buschinski <b.buschinski@web.de>
            2007 Jani Huhtanen <jani.huhtanen@tut.fi>
            2007 Kris Wong <kris.p.wong@gmail.com>
            2007 Mirko Stocker <me@misto.ch>
            2007 Trolltech ASA
+           2008-2009 Ramón Zarazúa <killerfox512@gmail.com>, <killerfox512+kde@gmail.com>
            2009 Dominik Haumann <dhaumann kde org>
            2009 Lior Mualem <lior.m.kde@gmail.com>
+           2009 Manuel Breugelmans <mbr.nxi@gmail.com>
            2009-2010 Aleix Pol Gonzalez <aleixpol@kde.org>
-           2010 Benjamin Port <port.benjamin@gmail.com> 
-           2010 Milian Wolff <mail@milianw.de>
-           2012 Niko Sams <niko.sams@gmai.com>
+           2010 Benjamin Port <port.benjamin@gmail.com>
+           2010, 2012, 2013 Milian Wolff <mail@milianw.de>
+           2010, 2012 Niko Sams <niko.sams@gmai.com>
+           2010, 2012 Olivier de Gaalon <olivier.jg@gmail.com>
+           2014 Kevin Funk <kfunk@kde.org>
+           2014 Milian Wolff <mail@milianw.de>
+           2014 Sven Brauch <svenbrauch@gmail.com>
 License: LGPL-2
 
 
@@ -303,6 +287,7 @@ Files: debugger/breakpoint/breakpoint.cpp
        debugger/interfaces/iframestackmodel.h
        debugger/interfaces/ivariablecontroller.cpp
        debugger/interfaces/ivariablecontroller.h
+       debugger/util/pathmappings.h
        documentation/documentationexport.h
        documentation/documentationfindwidget.cpp
        documentation/documentationfindwidget.h
@@ -413,9 +398,13 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/codecompletion/normaldeclarationcompletionitem.h
        language/codegen/archivetemplateloader.cpp
        language/codegen/archivetemplateloader.h
+       language/codegen/basicrefactoring.cpp
+       language/codegen/basicrefactoring.h
        language/codegen/codedescription.cpp
        language/codegen/codedescription.h
        language/codegen/codedescriptionmetatypes.h
+       language/codegen/progressdialogs/refactoringdialog.cpp
+       language/codegen/progressdialogs/refactoringdialog.h
        language/codegen/sourcefiletemplate.cpp
        language/codegen/sourcefiletemplate.h
        language/codegen/templateclassgenerator.cpp
@@ -437,15 +426,22 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/duchain/duchainutils.cpp
        language/duchain/duchainutils.h
        language/duchain/ducontextdata.h
+       language/duchain/ducontextdynamicdata.h
+       language/duchain/builders/dynamiclanguageexpressionvisitor.cpp
+       language/duchain/builders/dynamiclanguageexpressionvisitor.h
+       language/duchain/problem.cpp
+       language/duchain/problem.h
        language/duchain/referencecounting.cpp
        language/duchain/referencecounting.h
        language/duchain/tests/benchhashes.cpp
        language/duchain/tests/benchhashes.h
-       language/duchain/tests/benchmarks.cpp
-       language/duchain/tests/benchmarks.h
+       language/duchain/tests/serialization/tst_identifier.cpp
+       language/duchain/tests/serialization/tst_identifier.h
        language/duchain/tests/test_duchain.cpp
        language/duchain/tests/test_duchain.h
        language/duchain/topducontextdata.h
+       language/duchain/types/containertypes.cpp
+       language/duchain/types/containertypes.h
        language/highlighting/codehighlighting.cpp
        language/highlighting/codehighlighting.h
        language/highlighting/colorcache.cpp
@@ -454,6 +450,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/highlighting/configurablecolors.h
        language/highlighting/tests/test_highlighting.cpp
        language/highlighting/tests/test_highlighting.h
+       language/interfaces/abbreviations.cpp
+       language/interfaces/abbreviations.h
        language/interfaces/codecontext.cpp
        language/interfaces/codecontext.h
        language/interfaces/editorcontext.cpp
@@ -474,6 +472,7 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/interfaces/quickopendataprovider.h
        language/interfaces/quickopenfilter.h
        language/languageexport.h
+       language/util/kdevhash.h
        outputview/filtereditem.cpp
        outputview/filtereditem.h
        outputview/ioutputviewmodel.cpp
@@ -516,22 +515,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        plugins/contextbrowser/contextbrowser.h
        plugins/contextbrowser/contextbrowserview.cpp
        plugins/contextbrowser/contextbrowserview.h
-       plugins/dashboard/appletselector.cpp
-       plugins/dashboard/appletselector.h
-       plugins/dashboard/dashboardcorona.cpp
-       plugins/dashboard/dashboardcorona.h
-       plugins/dashboard/dashboard.cpp
-       plugins/dashboard/dashboarddataengine.cpp
-       plugins/dashboard/dashboarddataengine.h
-       plugins/dashboard/dashboarddocument.cpp
-       plugins/dashboard/dashboarddocument.h
-       plugins/dashboard/dashboard.h
-       plugins/dashboard/dashboardpluginloader.cpp
-       plugins/dashboard/dashboardpluginloader.h
-       plugins/dashboard/dashboardview.cpp
-       plugins/dashboard/dashboardview.h
-       plugins/dashboard/kdevprojectdashboard.cpp
-       plugins/dashboard/kdevprojectdashboard.h
        plugins/documentview/kdevdocumentmodel.cpp
        plugins/documentview/kdevdocumentmodel.h
        plugins/documentview/kdevdocumentselection.cpp
@@ -574,8 +557,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        plugins/filetemplates/testcasespage.h
        plugins/genericprojectmanager/genericmanager.cpp
        plugins/genericprojectmanager/genericmanager.h
-       plugins/genericprojectmanager/genericprojectmanagerpreferences.cpp
-       plugins/genericprojectmanager/genericprojectmanagerpreferences.h
        plugins/genericprojectmanager/test/reloadtest.cpp
        plugins/genericprojectmanager/test/reloadtest.h
        plugins/git/gitjob.cpp
@@ -617,10 +598,16 @@ Files: debugger/breakpoint/breakpoint.cpp
        plugins/projectmanagerview/projectmanagerview.h
        plugins/projectmanagerview/projectmanagerviewplugin.cpp
        plugins/projectmanagerview/projectmanagerviewplugin.h
+       plugins/projectmanagerview/projectmodelitemdelegate.cpp
+       plugins/projectmanagerview/projectmodelitemdelegate.h
        plugins/projectmanagerview/projectmodelsaver.cpp
        plugins/projectmanagerview/projectmodelsaver.h
        plugins/projectmanagerview/projecttreeview.cpp
        plugins/projectmanagerview/projecttreeview.h
+       plugins/projectmanagerview/vcsoverlayproxymodel.cpp
+       plugins/projectmanagerview/vcsoverlayproxymodel.h
+       plugins/quickopen/documentationquickopenprovider.cpp
+       plugins/quickopen/documentationquickopenprovider.h
        plugins/quickopen/expandingtree/expandingdelegate.cpp
        plugins/quickopen/expandingtree/expandingdelegate.h
        plugins/quickopen/expandingtree/expandingtree.cpp
@@ -716,11 +703,17 @@ Files: debugger/breakpoint/breakpoint.cpp
        project/interfaces/iprojectbuilder.h
        project/interfaces/iprojectfilemanager.cpp
        project/interfaces/iprojectfilemanager.h
+       project/interfaces/iprojectfilter.cpp
+       project/interfaces/iprojectfilter.h
+       project/interfaces/iprojectfilterprovider.cpp
+       project/interfaces/iprojectfilterprovider.h
        project/projectbuildsetmodel.cpp
        project/projectbuildsetmodel.h
        project/projectconfigskeleton.cpp
        project/projectconfigskeleton.h
        project/projectexport.h
+       project/projectfiltermanager.cpp
+       project/projectfiltermanager.h
        project/projectitemlineedit.cpp
        project/projectitemlineedit.h
        project/projectmodel.cpp
@@ -731,6 +724,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        project/tests/projectmodelperformancetest.h
        project/tests/projectmodeltest.cpp
        project/tests/projectmodeltest.h
+       shell/areadisplay.cpp
+       shell/areadisplay.h
        shell/completionsettings.cpp
        shell/completionsettings.h
        shell/core.cpp
@@ -738,23 +733,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/core_p.h
        shell/documentcontroller.cpp
        shell/documentcontroller.h
-       shell/kross/krossdocument.cpp
-       shell/kross/xmltokross/abstractclasses.cpp
-       shell/kross/xmltokross/cppxmlparse.cpp
-       shell/kross/xmltokross/cppxmlparse.h
-       shell/kross/xmltokross/duchainextractor.cpp
-       shell/kross/xmltokross/duchainextractor.h
-       shell/kross/xmltokross/duchainreader.cpp
-       shell/kross/xmltokross/duchainreader.h
-       shell/kross/xmltokross/dummybsm.cpp
-       shell/kross/xmltokross/dummybsm.h
-       shell/kross/xmltokross/interfacecreator.h
-       shell/kross/xmltokross/krossimpl.h
-       shell/kross/xmltokross/krosswrapper.h
-       shell/kross/xmltokross/main.cpp
-       shell/kross/xmltokross/mainduchain.cpp
-       shell/kross/xmltokross/project.cpp
-       shell/kross/xmltokross/project.h
        shell/languagecontroller.cpp
        shell/languagecontroller.h
        shell/language.cpp
@@ -777,8 +755,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/patchdocument.h
        shell/plugincontroller.cpp
        shell/plugincontroller.h
-       shell/progressmanager.cpp
-       shell/progressmanager.h
        shell/projectcontroller.cpp
        shell/projectcontroller.h
        shell/project.cpp
@@ -789,6 +765,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/savedialog.h
        shell/selectioncontroller.cpp
        shell/selectioncontroller.h
+       shell/sessionchooserdialog.cpp
+       shell/sessionchooserdialog.h
        shell/sessioncontroller.cpp
        shell/sessioncontroller.h
        shell/session.cpp
@@ -806,6 +784,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/sourceformattercontroller.h
        shell/statusbar.cpp
        shell/statusbar.h
+       shell/testeditvimode.cpp
+       shell/testeditvimode.h
        shell/tests/nonguiinterfaceplugin.cpp
        shell/tests/nonguiinterfaceplugin.h
        shell/tests/plugincontrollertest.cpp
@@ -880,7 +860,9 @@ Files: debugger/breakpoint/breakpoint.cpp
        sublime/view.h
        template/filters/kdevfilters.cpp
        template/filters/kdevfilters.h
+       tests/autotestshell.cpp
        tests/autotestshell.h
+       tests/json/kdevplatformjsontestsexport.h
        tests/kdevplatformtestsexport.h
        tests/testcore.cpp
        tests/testcore.h
@@ -894,6 +876,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        tests/testproject.h
        util/activetooltip.cpp
        util/activetooltip.h
+       util/autoorientedsplitter.cpp
+       util/autoorientedsplitter.h
        util/commandexecutor.cpp
        util/commandexecutor.h
        util/dbus_socket_transformer/main.cpp
@@ -903,6 +887,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        util/environmentconfigurebutton.h
        util/environmentgrouplist.cpp
        util/environmentgrouplist.h
+       environmentselectionmodel.cpp
+       environmentselectionmodel.h
        util/environmentselectionwidget.cpp
        util/environmentselectionwidget.h
        util/executecompositejob.cpp
@@ -919,11 +905,13 @@ Files: debugger/breakpoint/breakpoint.cpp
        util/projecttestjob.h
        util/richtextpushbutton.cpp
        util/richtextpushbutton.h
-       util/richtexttoolbutton.cpp
-       util/richtexttoolbutton.h
        util/sequentiallyrunjobs.cpp
        util/sequentiallyrunjobs.h
+       util/shellutils.cpp
+       util/shellutils.h
        util/utilexport.h
+       vcs/models/projectchangesmodel.cpp
+       vcs/models/projectchangesmodel.h
        vcs/models/vcsannotationmodel.cpp
        vcs/models/vcsannotationmodel.h
        vcs/models/vcseventmodel.cpp
@@ -981,8 +969,9 @@ Copyright: 1999-2002 Bernd Gehrmann <bernd@kdevelop.org>
            2009 Lior Mualem <lior.m.kde@gmail.com>
            2009-2010 Niko Sams <niko.sams@gmail.com>
            2009 Radu Benea <radub82@gmail.com>
-           2007-2012 Aleix Pol Gonzalez <aleixpol@kde.org>, <aleixpol@gmail.com>
-           2009-2012 Milian Wolff <mail@milianw.de>
+           2007-2013 Aleix Pol Gonzalez <aleixpol@kde.org>, <aleixpol@gmail.com>
+           2009-2013 Milian Wolff <mail@milianw.de>
+           2009 Vladimir Prus  <ghost@cs.msu.su>
            2010 Benjamin Port <port.benjamin@gmail.com>
            2010 Julien Desgats <julien.desgats@gmail.com>
            2010-2011 Dmitry Risenberg <dmitry.risenberg@gmail.com>
@@ -991,12 +980,16 @@ Copyright: 1999-2002 Bernd Gehrmann <bernd@kdevelop.org>
            2011 Yannick Motta <yannick.motta@gmail.com>
            2012 Andrew Fuller <mactalla.obair@gmail.com>
            2012 André Stein <andre.stein@rwth-aachen.de>
-           2012 Ivan Shapovalov <intelfx100@gmail.com>
+           2012-2013 Ivan Shapovalov <intelfx100@gmail.com>
            2012 Miha Čančula <miha@noughmad.eu>
            2012 Morten Danielsen Volden <mvolden2@gmail.com>
-           2012 Sven Brauch <svenbrauch@googlemail.com>
+           2012 Olivier de Gaalon <olivier.jg@gmail.com>
+           2012, 2014 Sven Brauch <svenbrauch@googlemail.com>
+           2013 Sebastian Kügler <sebas@kde.org>
+           2011-2014 Sven Brauch <svenbrauch@gmail.com>, <svenbrauch@googlemail.com>
+           2013-2014 Kevin Funk <kfunk@kde.org>
+           2014 Miquel Sabaté <mikisabate@gmail.com>
 License: LGPL-2+
-
 
 
 Files: plugins/externalscript/editexternalscript.cpp
@@ -1005,8 +998,6 @@ Files: plugins/externalscript/editexternalscript.cpp
        plugins/externalscript/externalscriptdebug.h
        plugins/externalscript/externalscriptitem.cpp
        plugins/externalscript/externalscriptitem.h
-       plugins/externalscript/externalscriptoutputmodel.cpp
-       plugins/externalscript/externalscriptoutputmodel.h
        plugins/externalscript/externalscriptplugin.cpp
        plugins/externalscript/externalscriptplugin.h
        plugins/externalscript/externalscriptview.cpp LGPL
@@ -1022,292 +1013,23 @@ Copyright: 2002-2008 The RapidSvn Group
 License: LGPL-2.1+
 
 
-Files: documentation/documentationview.cpp
-       documentation/documentationview.h
-       interfaces/iassistant.cpp
-       interfaces/iassistant.h
-       interfaces/idocumentationcontroller.h
-       interfaces/ipatchsource.cpp
-       interfaces/ipatchsource.h
-       language/backgroundparser/parseprojectjob.cpp
-       language/backgroundparser/parseprojectjob.h
-       language/checks/controlflowgraph.cpp
-       language/checks/controlflowgraph.h
-       language/checks/controlflownode.cpp
-       language/checks/controlflownode.h
-       language/checks/dataaccess.cpp
-       language/checks/dataaccess.h
-       language/checks/dataaccessrepository.cpp
-       language/checks/dataaccessrepository.h
-       language/codecompletion/codecompletioncontext.cpp
-       language/codecompletion/codecompletioncontext.h
-       language/codecompletion/codecompletionhelper.cpp
-       language/codecompletion/codecompletionhelper.h
-       language/codecompletion/codecompletiontesthelper.h
-       language/codegen/astchangeset.h
-       language/codegen/codegenerator.cpp
-       language/codegen/codegenerator.h
-       language/codegen/coderepresentation.cpp
-       language/codegen/coderepresentation.h
-       language/codegen/documentchangeset.cpp
-       language/codegen/documentchangeset.h
-       language/codegen/duchainchangeset.cpp
-       language/codegen/duchainchangeset.h
-       language/codegen/utilities.cpp
-       language/codegen/utilities.h
-       language/duchain/abstractfunctiondeclaration.cpp
-       language/duchain/abstractfunctiondeclaration.h
-       language/duchain/aliasdeclaration.cpp
-       language/duchain/aliasdeclaration.h
-       language/duchain/appendedlist.h
-       language/duchain/appendedlist_static.h
-       language/duchain/builders/abstractdeclarationbuilder.h
-       language/duchain/builders/abstracttypebuilder.h
-       language/duchain/builders/abstractusebuilder.h
-       language/duchain/classdeclaration.cpp
-       language/duchain/classdeclaration.h
-       language/duchain/classfunctiondeclaration.cpp
-       language/duchain/classfunctiondeclaration.h
-       language/duchain/classmemberdeclaration.cpp
-       language/duchain/classmemberdeclarationdata.h
-       language/duchain/classmemberdeclaration.h
-       language/duchain/codemodel.cpp
-       language/duchain/codemodel.h
-       language/duchain/declaration.cpp
-       language/duchain/declarationdata.h
-       language/duchain/declaration.h
-       language/duchain/declarationid.cpp
-       language/duchain/declarationid.h
-       language/duchain/definitions.cpp
-       language/duchain/definitions.h
-       language/duchain/duchainbase.cpp
-       language/duchain/duchainbase.h
-       language/duchain/duchain.cpp
-       language/duchain/duchain.h
-       language/duchain/duchainlock.cpp
-       language/duchain/duchainlock.h
-       language/duchain/duchainobserver.cpp
-       language/duchain/duchainobserver.h
-       language/duchain/duchainpointer.cpp
-       language/duchain/duchainpointer.h
-       language/duchain/duchainregister.cpp
-       language/duchain/duchainregister.h
-       language/duchain/ducontext.cpp
-       language/duchain/ducontext.h
-       language/duchain/dumpchain.cpp
-       language/duchain/dumpchain.h
-       language/duchain/forwarddeclaration.cpp
-       language/duchain/forwarddeclaration.h
-       language/duchain/functiondeclaration.cpp
-       language/duchain/functiondeclaration.h
-       language/duchain/functiondefinition.cpp
-       language/duchain/functiondefinition.h
-       language/duchain/identifier.cpp
-       language/duchain/identifier.h
-       language/duchain/importers.cpp
-       language/duchain/importers.h
-       language/duchain/indexeddeclaration.cpp
-       language/duchain/indexeddeclaration.h
-       language/duchain/indexedducontext.cpp
-       language/duchain/indexedducontext.h
-       language/duchain/indexedtopducontext.cpp
-       language/duchain/indexedtopducontext.h
-       language/duchain/instantiationinformation.cpp
-       language/duchain/instantiationinformation.h
-       language/duchain/localindexeddeclaration.cpp
-       language/duchain/localindexeddeclaration.h
-       language/duchain/localindexedducontext.cpp
-       language/duchain/localindexedducontext.h
-       language/duchain/namespacealiasdeclaration.cpp
-       language/duchain/namespacealiasdeclaration.h
-       language/duchain/navigation/abstractdeclarationnavigationcontext.cpp
-       language/duchain/navigation/abstractdeclarationnavigationcontext.h
-       language/duchain/navigation/abstractincludenavigationcontext.cpp
-       language/duchain/navigation/abstractincludenavigationcontext.h
-       language/duchain/navigation/abstractnavigationcontext.cpp
-       language/duchain/navigation/abstractnavigationcontext.h
-       language/duchain/navigation/abstractnavigationwidget.cpp
-       language/duchain/navigation/abstractnavigationwidget.h
-       language/duchain/navigation/navigationaction.h
-       language/duchain/navigation/problemnavigationcontext.cpp
-       language/duchain/navigation/problemnavigationcontext.h
-       language/duchain/navigation/usescollector.cpp
-       language/duchain/navigation/usescollector.h
-       language/duchain/navigation/usesnavigationcontext.cpp
-       language/duchain/navigation/usesnavigationcontext.h
-       language/duchain/navigation/useswidget.cpp
-       language/duchain/navigation/useswidget.h
-       language/duchain/parsingenvironment.cpp
-       language/duchain/parsingenvironment.h
-       language/duchain/persistentsetmap.h
-       language/duchain/persistentsymboltable.cpp
-       language/duchain/persistentsymboltable.h
-       language/duchain/repositories/itemrepository.cpp
-       language/duchain/repositories/itemrepository.h
-       language/duchain/repositories/stringrepository.h
-       language/duchain/repositories/typerepository.cpp
-       language/duchain/repositories/typerepository.h
-       language/duchain/specializationstore.cpp
-       language/duchain/specializationstore.h
-       language/duchain/stringhelpers.cpp
-       language/duchain/stringhelpers.h
-       language/duchain/topducontext.cpp
-       language/duchain/topducontextdynamicdata.cpp
-       language/duchain/topducontextdynamicdata.h
-       language/duchain/topducontext.h
-       language/duchain/topducontextutils.h
-       language/duchain/types/abstracttype.cpp
-       language/duchain/types/abstracttype.h
-       language/duchain/types/alltypes.h
-       language/duchain/types/arraytype.cpp
-       language/duchain/types/arraytype.h
-       language/duchain/types/constantintegraltype.cpp
-       language/duchain/types/constantintegraltype.h
-       language/duchain/types/delayedtype.cpp
-       language/duchain/types/delayedtype.h
-       language/duchain/types/enumerationtype.cpp
-       language/duchain/types/enumerationtype.h
-       language/duchain/types/enumeratortype.cpp
-       language/duchain/types/enumeratortype.h
-       language/duchain/types/functiontype.cpp
-       language/duchain/types/functiontype.h
-       language/duchain/types/identifiedtype.cpp
-       language/duchain/types/identifiedtype.h
-       language/duchain/types/indexedtype.cpp
-       language/duchain/types/indexedtype.h
-       language/duchain/types/integraltype.cpp
-       language/duchain/types/integraltype.h
-       language/duchain/types/pointertype.cpp
-       language/duchain/types/pointertype.h
-       language/duchain/types/referencetype.cpp
-       language/duchain/types/referencetype.h
-       language/duchain/types/structuretype.cpp
-       language/duchain/types/structuretype.h
-       language/duchain/types/typealiastype.cpp
-       language/duchain/types/typealiastype.h
-       language/duchain/types/typeregister.cpp
-       language/duchain/types/typeregister.h
-       language/duchain/types/typesystem.cpp
-       language/duchain/types/typesystemdata.h
-       language/duchain/types/typesystem.h
-       language/duchain/types/typeutils.cpp
-       language/duchain/types/typeutils.h
-       language/duchain/types/unsuretype.cpp
-       language/duchain/types/unsuretype.h
-       language/duchain/use.cpp
-       language/duchain/use.h
-       language/duchain/uses.cpp
-       language/duchain/uses.h
-       language/duchain/waitforupdate.cpp
-       language/duchain/waitforupdate.h
-       language/editor/cursorinrevision.h
-       language/editor/documentcursor.h
-       language/editor/documentrange.h
-       language/editor/editorintegratorstatic.h
-       language/editor/modificationrevision.cpp
-       language/editor/modificationrevision.h
-       language/editor/modificationrevisionset.cpp
-       language/editor/modificationrevisionset.h
-       language/editor/rangeinrevision.h
-       language/editor/simplecursor.h
-       language/editor/simplerange.h
-       language/interfaces/iastcontainer.cpp
-       language/interfaces/iastcontainer.h
-       language/util/debuglanguageparserhelper.h
-       language/util/includeitem.cpp
-       language/util/includeitem.h
-       language/util/navigationtooltip.cpp
-       language/util/navigationtooltip.h
-       plugins/classbrowser/projectfolder.cpp
-       plugins/filemanager/bookmarkhandler.cpp
-       plugins/filemanager/bookmarkhandler.h
-       plugins/filetemplates/classidentifierpage.cpp
-       plugins/filetemplates/classidentifierpage.h
-       plugins/filetemplates/licensepage.cpp
-       plugins/filetemplates/licensepage.h
-       plugins/filetemplates/outputpage.cpp
-       plugins/filetemplates/outputpage.h
-       plugins/filetemplates/overridespage.cpp
-       plugins/filetemplates/overridespage.h
-       plugins/quickopen/customlistquickopen.cpp
-       plugins/quickopen/customlistquickopen.h
-       plugins/quickopen/declarationlistquickopen.cpp
-       plugins/quickopen/declarationlistquickopen.h
-       plugins/quickopen/duchainitemquickopen.cpp
-       plugins/quickopen/duchainitemquickopen.h
-       plugins/quickopen/projectfilequickopen.cpp
-       plugins/quickopen/projectfilequickopen.h
-       plugins/quickopen/projectitemquickopen.cpp
-       plugins/quickopen/projectitemquickopen.h
-       plugins/quickopen/quickopenmodel.cpp
-       plugins/quickopen/quickopenmodel.h
-       shell/assistantpopup.cpp
-       shell/assistantpopup.h
-       shell/documentationcontroller.cpp
-       shell/documentationcontroller.h
-       shell/overlaywidget.cpp
-       shell/overlaywidget.h
-       shell/patchdocument.cpp
-       shell/progressdialog.cpp
-       shell/progressdialog.h
-       shell/progresswidget.cpp
-       shell/progresswidget.h
-       sublime/blur.h
-       sublime/holdupdates.cpp
-       sublime/holdupdates.h
-       tests/json/declarationvalidator.cpp
-       tests/json/declarationvalidator.h
-       tests/json/delayedoutput.cpp
-       tests/json/delayedoutput.h
-       tests/json/jsondeclarationtests.h
-       tests/json/jsonducontexttests.h
-       tests/json/jsontesthelpers.h
-       tests/json/jsontypetests.h
-       tests/json/testsuite.h
-       tests/testfile.cpp
-       tests/testfile.h
-       util/convenientfreelist.h
-       util/embeddedfreetree.h
-       util/focusedtreeview.cpp
-       util/ksharedobject.h
-       util/pushvalue.h
-       util/tests/test_embeddedfreetree.cpp
-       util/tests/test_kdevvarlengtharray.cpp
-       vcs/models/projectchangesmodel.cpp
-       vcs/models/projectchangesmodel.h
-       vcs/widgets/vcsdiffpatchsources.cpp
-       vcs/widgets/vcsdiffpatchsources.
-Copyright: 2002 Anders Lund <anders.lund@lund.tdcadsl.dk>
-           2002-2003 Klarävdalens Datakonsult AB
-           2002-2005 Roberto Raggi <roberto@kdevelop.org>
+Files: shell/progresswidget/overlaywidget.cpp
+       shell/progresswidget/overlaywidget.h
+       shell/progresswidget/progressdialog.cpp
+       shell/progresswidget/progressdialog.h
+       util/kdev_format_source
+Copyright: 2002-2003 Klarävdalens Datakonsult AB
            2004 David Faure <faure@kde.org>
            2004 Till Adam <adam@kde.org>
-           2006 Adam Treat <treat@kde.org>
-           2006 David Nolden <david.nolden.kdevelop@art-master.de>
-           2006 Roberto Raggi <roberto@kdevelop.org>
-           2006-2008 Hamish Rodda <rodda@kde.org>
-           2007 Bernd Buschinski <b.buschinski@web.de>
-           2007 Jani Huhtanen <jani.huhtanen@tut.fi>
-           2007 Kris Wong <kris.p.wong@gmail.com>
-           2007 Mirko Stocker <me@misto.ch>
-           2007-2010 David Nolden <david.nolden.kdevelop@art-master.de>, david.nolden@kdevelop.org>
-           2008-2009 Ramón Zarazúa <killerfox512@gmail.com>, <killerfox512+kde@gmail.com>
-           2009 Dominik Haumann <dhaumann kde org>
-           2009 Lior Mualem <lior.m.kde@gmail.com>
            2009 Manuel Breugelmans <mbr.nxi@gmail.com>
-           2009-2011 Aleix Pol Gonzalez <aleixpol@kde.org>
-           2010 Benjamin Port <port.benjamin@gmail.com>
-           2010,2012 Niko Sams <niko.sams@gmail.com>
-           2010-2012 Milian Wolff <mail@milianw.de>
-           2012 Olivier de Gaalon <olivier.jg@gmail.com>
+           David Nolden <david.nolden.kdevelop@art-master.de>
 License: GPL-2
 
 
-
 Files: debugger/breakpoint/breakpoint.cpp
+       debugger/breakpoint/breakpoint.h
        debugger/breakpoint/breakpointdetails.cpp
        debugger/breakpoint/breakpointdetails.h
-       debugger/breakpoint/breakpoint.h
        debugger/breakpoint/breakpointmodel.cpp
        debugger/breakpoint/breakpointmodel.h
        debugger/breakpoint/breakpointwidget.cpp
@@ -1321,11 +1043,11 @@ Files: debugger/breakpoint/breakpoint.cpp
        debugger/interfaces/ibreakpointcontroller.h
        debugger/interfaces/idebugsession.cpp
        debugger/interfaces/idebugsession.h
+       debugger/interfaces/iframestackmodel.cpp
        debugger/interfaces/iframestackmodel.h
        debugger/interfaces/ivariablecontroller.cpp
        debugger/interfaces/ivariablecontroller.h
        debugger/util/pathmappings.cpp
-       debugger/util/pathmappings.h
        debugger/util/treeitem.cpp
        debugger/util/treeitem.h
        debugger/util/treemodel.cpp
@@ -1357,25 +1079,25 @@ Files: debugger/breakpoint/breakpoint.cpp
        interfaces/icore.h
        interfaces/idebugcontroller.cpp
        interfaces/idebugcontroller.h
-       interfaces/idocumentationcontroller.cpp
+       interfaces/idocument.cpp
+       interfaces/idocument.h
        interfaces/idocumentation.cpp
        interfaces/idocumentation.h
+       interfaces/idocumentationcontroller.cpp
        interfaces/idocumentationprovider.cpp
        interfaces/idocumentationprovider.h
        interfaces/idocumentationproviderprovider.cpp
        interfaces/idocumentationproviderprovider.h
        interfaces/idocumentcontroller.cpp
        interfaces/idocumentcontroller.h
-       interfaces/idocument.cpp
-       interfaces/idocument.h
+       interfaces/ilanguage.cpp
+       interfaces/ilanguage.h
        interfaces/ilanguagecheck.cpp
        interfaces/ilanguagecheck.h
        interfaces/ilanguagecheckprovider.cpp
        interfaces/ilanguagecheckprovider.h
        interfaces/ilanguagecontroller.cpp
        interfaces/ilanguagecontroller.h
-       interfaces/ilanguage.cpp
-       interfaces/ilanguage.h
        interfaces/ilaunchconfiguration.cpp
        interfaces/ilaunchconfiguration.h
        interfaces/ilauncher.cpp
@@ -1389,14 +1111,13 @@ Files: debugger/breakpoint/breakpoint.cpp
        interfaces/ipatchdocument.h
        interfaces/ipatchexporter.cpp
        interfaces/ipatchexporter.h
-       interfaces/iplugincontroller.cpp
-       interfaces/iplugincontroller.h
        interfaces/iplugin.cpp
        interfaces/iplugin.h
+       interfaces/iplugincontroller.cpp
+       interfaces/iplugincontroller.h
+       interfaces/iproject.cpp
        interfaces/iprojectcontroller.cpp
        interfaces/iprojectcontroller.h
-       interfaces/iproject.cpp
-       interfaces/iproject.h
        interfaces/iprojectprovider.cpp
        interfaces/iprojectprovider.h
        interfaces/iruncontroller.cpp
@@ -1405,10 +1126,10 @@ Files: debugger/breakpoint/breakpoint.cpp
        interfaces/iselectioncontroller.h
        interfaces/isession.cpp
        interfaces/isession.h
-       interfaces/isourceformattercontroller.cpp
-       interfaces/isourceformattercontroller.h
        interfaces/isourceformatter.cpp
        interfaces/isourceformatter.h
+       interfaces/isourceformattercontroller.cpp
+       interfaces/isourceformattercontroller.h
        interfaces/istatus.cpp
        interfaces/istatus.h
        interfaces/itemplateprovider.cpp
@@ -1445,9 +1166,9 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/codecompletion/codecompletion.cpp
        language/codecompletion/codecompletion.h
        language/codecompletion/codecompletionitem.cpp
+       language/codecompletion/codecompletionitem.h
        language/codecompletion/codecompletionitemgrouper.cpp
        language/codecompletion/codecompletionitemgrouper.h
-       language/codecompletion/codecompletionitem.h
        language/codecompletion/codecompletionmodel.cpp
        language/codecompletion/codecompletionmodel.h
        language/codecompletion/codecompletionworker.cpp
@@ -1461,8 +1182,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/codegen/codedescription.cpp
        language/codegen/codedescription.h
        language/codegen/codedescriptionmetatypes.h
-       language/codegen/komparesupport.cpp
-       language/codegen/komparesupport.h
        language/codegen/sourcefiletemplate.cpp
        language/codegen/sourcefiletemplate.h
        language/codegen/templateclassgenerator.cpp
@@ -1520,10 +1239,10 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/interfaces/icontextbrowser.h
        language/interfaces/icreateclasshelper.cpp
        language/interfaces/icreateclasshelper.h
+       language/interfaces/idefinesandincludesmanager.cpp
+       language/interfaces/idefinesandincludesmanager.h
        language/interfaces/ilanguagesupport.cpp
        language/interfaces/ilanguagesupport.h
-       language/interfaces/iproblem.cpp
-       language/interfaces/iproblem.h
        language/interfaces/iquickopen.cpp
        language/interfaces/iquickopen.h
        language/interfaces/quickopendataprovider.cpp
@@ -1535,6 +1254,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        language/util/setrepository.h
        outputview/filtereditem.cpp
        outputview/filtereditem.h
+       outputview/ifilterstrategy.cpp
+       outputview/ifilterstrategy.h
        outputview/ioutputview.cpp
        outputview/ioutputview.h
        outputview/ioutputviewmodel.cpp
@@ -1543,6 +1264,8 @@ Files: debugger/breakpoint/breakpoint.cpp
        outputview/outputdelegate.h
        outputview/outputexecutejob.cpp
        outputview/outputexecutejob.h
+       outputview/outputfilteringstrategies.cpp
+       outputview/outputfilteringstrategies.h
        outputview/outputformats.cpp
        outputview/outputformats.h
        outputview/outputjob.cpp
@@ -1550,6 +1273,11 @@ Files: debugger/breakpoint/breakpoint.cpp
        outputview/outputmodel.cpp
        outputview/outputmodel.h
        outputview/outputviewexport.h
+       outputview/tests/filteringstrategytest.cpp
+       outputview/tests/filteringstrategytest.h
+       outputview/tests/outputmodeltest.cpp
+       outputview/tests/outputmodeltest.h
+       outputview/tests/testlinebuilderfunctions.h
        plugins/appwizard/appwizarddialog.cpp
        plugins/appwizard/appwizarddialog.h
        plugins/appwizard/appwizardpagewidget.cpp
@@ -1617,28 +1345,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        plugins/cvs/importmetadatawidget.h
        plugins/cvs/tests/cvstest.cpp
        plugins/cvs/tests/cvstest.h
-       plugins/dashboard/appletselector.cpp
-       plugins/dashboard/appletselector.h
-       plugins/dashboard/dashboardcorona.cpp
-       plugins/dashboard/dashboardcorona.h
-       plugins/dashboard/dashboard.cpp
-       plugins/dashboard/dashboarddataengine.cpp
-       plugins/dashboard/dashboarddataengine.h
-       plugins/dashboard/dashboarddocument.cpp
-       plugins/dashboard/dashboarddocument.h
-       plugins/dashboard/dashboard.h
-       plugins/dashboard/dashboardpluginloader.cpp
-       plugins/dashboard/dashboardpluginloader.h
-       plugins/dashboard/dashboardview.cpp
-       plugins/dashboard/dashboardview.h
-       plugins/dashboard/declarative/icoreobject.cpp
-       plugins/dashboard/declarative/icoreobject.h
-       plugins/dashboard/declarative/kdevelopdashboarddeclarativeplugin.cpp
-       plugins/dashboard/declarative/kdevelopdashboarddeclarativeplugin.h
-       plugins/dashboard/kdevprojectdashboard.cpp
-       plugins/dashboard/kdevprojectdashboard.h
-       plugins/dashboard/plasmoids/projectfileplasmoid/projectfileelement.cpp
-       plugins/dashboard/plasmoids/projectfileplasmoid/projectfileelement.h
        plugins/documentswitcher/documentswitcherplugin.cpp
        plugins/documentswitcher/documentswitcherplugin.h
        plugins/documentswitcher/documentswitchertreeview.cpp
@@ -1648,9 +1354,9 @@ Files: debugger/breakpoint/breakpoint.cpp
        plugins/documentview/kdevdocumentselection.cpp
        plugins/documentview/kdevdocumentselection.h
        plugins/documentview/kdevdocumentview.cpp
+       plugins/documentview/kdevdocumentview.h
        plugins/documentview/kdevdocumentviewdelegate.cpp
        plugins/documentview/kdevdocumentviewdelegate.h
-       plugins/documentview/kdevdocumentview.h
        plugins/documentview/kdevdocumentviewplugin.cpp
        plugins/documentview/kdevdocumentviewplugin.h
        plugins/documentview/settings/preferences.cpp
@@ -1693,14 +1399,14 @@ Files: debugger/breakpoint/breakpoint.cpp
        plugins/filetemplates/testcasespage.h
        plugins/genericprojectmanager/genericmanager.cpp
        plugins/genericprojectmanager/genericmanager.h
-       plugins/genericprojectmanager/genericprojectmanagerpreferences.cpp
-       plugins/genericprojectmanager/genericprojectmanagerpreferences.h
        plugins/genericprojectmanager/test/reloadtest.cpp
        plugins/genericprojectmanager/test/reloadtest.h
        plugins/git/gitjob.cpp
        plugins/git/gitjob.h
        plugins/git/stashmanagerdialog.cpp
        plugins/git/stashmanagerdialog.h
+       plugins/git/stashpatchsource.cpp
+       plugins/git/stashpatchsource.h
        plugins/grepview/grepdialog.cpp
        plugins/grepview/grepdialog.h
        plugins/grepview/grepjob.cpp
@@ -1813,14 +1519,14 @@ Files: debugger/breakpoint/breakpoint.cpp
        plugins/snippet/legacy/editrepository.h
        plugins/snippet/legacy/editsnippet.cpp
        plugins/snippet/legacy/editsnippet.h
+       plugins/snippet/legacy/snippet.cpp
+       plugins/snippet/legacy/snippet.h
        plugins/snippet/legacy/snippetcompletionitem.cpp
        plugins/snippet/legacy/snippetcompletionitem.h
        plugins/snippet/legacy/snippetcompletionmodel.cpp
        plugins/snippet/legacy/snippetcompletionmodel.h
-       plugins/snippet/legacy/snippet.cpp
        plugins/snippet/legacy/snippetfilterproxymodel.cpp
        plugins/snippet/legacy/snippetfilterproxymodel.h
-       plugins/snippet/legacy/snippet.h
        plugins/snippet/legacy/snippetrepository.cpp
        plugins/snippet/legacy/snippetrepository.h
        plugins/snippet/legacy/snippetstore.cpp
@@ -1973,50 +1679,19 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/debugcontroller.h
        shell/documentcontroller.cpp
        shell/documentcontroller.h
-       shell/kross/dvcsadaptors.h
-       shell/kross/krossbuildsystemmanager.cpp
-       shell/kross/krossbuildsystemmanager.h
-       shell/kross/krossdistributedversioncontrol.cpp
-       shell/kross/krossdistributedversioncontrol.h
-       shell/kross/krossdocument.cpp
-       shell/kross/krossplugin.cpp
-       shell/kross/krossplugin.h
-       shell/kross/krosstoolviewfactory.cpp
-       shell/kross/krosstoolviewfactory.h
-       shell/kross/krossvcsjob.cpp
-       shell/kross/krossvcsjob.h
-       shell/kross/projectitemadaptors.cpp
-       shell/kross/projectitemadaptors.h
-       shell/kross/xmltokross/abstractclasses.cpp
-       shell/kross/xmltokross/cppxmlparse.cpp
-       shell/kross/xmltokross/cppxmlparse.h
-       shell/kross/xmltokross/duchainextractor.cpp
-       shell/kross/xmltokross/duchainextractor.h
-       shell/kross/xmltokross/duchainreader.cpp
-       shell/kross/xmltokross/duchainreader.h
-       shell/kross/xmltokross/dummybsm.cpp
-       shell/kross/xmltokross/dummybsm.h
-       shell/kross/xmltokross/interfacecreator.h
-       shell/kross/xmltokross/krossimpl.h
-       shell/kross/xmltokross/krosswrapper.h
-       shell/kross/xmltokross/main.cpp
-       shell/kross/xmltokross/mainduchain.cpp
-       shell/kross/xmltokross/project.cpp
-       shell/kross/xmltokross/project.h
-       shell/kross/xmltokross/rppconfig.h
-       shell/languagecontroller.cpp
-       shell/languagecontroller.h
        shell/language.cpp
        shell/language.h
+       shell/languagecontroller.cpp
+       shell/languagecontroller.h
        shell/launchconfiguration.cpp
+       shell/launchconfiguration.h
        shell/launchconfigurationdialog.cpp
        shell/launchconfigurationdialog.h
-       shell/launchconfiguration.h
        shell/loadedpluginsdialog.cpp
        shell/loadedpluginsdialog.h
-       shell/mainwindow_actions.cpp
        shell/mainwindow.cpp
        shell/mainwindow.h
+       shell/mainwindow_actions.cpp
        shell/mainwindow_p.cpp
        shell/mainwindow_p.h
        shell/openprojectdialog.cpp
@@ -2027,15 +1702,16 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/partcontroller.h
        shell/partdocument.cpp
        shell/partdocument.h
-       shell/patchdocument.h
        shell/plugincontroller.cpp
        shell/plugincontroller.h
-       shell/progressmanager.cpp
-       shell/progressmanager.h
-       shell/projectcontroller.cpp
-       shell/projectcontroller.h
+       shell/progresswidget/progressmanager.cpp
+       shell/progresswidget/progressmanager.h
+       shell/progresswidget/statusbarprogresswidget.cpp
+       shell/progresswidget/statusbarprogresswidget.h
        shell/project.cpp
        shell/project.h
+       shell/projectcontroller.cpp
+       shell/projectcontroller.h
        shell/projectinfopage.cpp
        shell/projectinfopage.h
        shell/projectsourcepage.cpp
@@ -2046,12 +1722,12 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/savedialog.h
        shell/selectioncontroller.cpp
        shell/selectioncontroller.h
+       shell/session.cpp
+       shell/session.h
        shell/sessioncontroller.cpp
        shell/sessioncontroller.h
-       shell/session.cpp
        shell/sessiondialog.cpp
        shell/sessiondialog.h
-       shell/session.h
        shell/settings/bgpreferences.cpp
        shell/settings/bgpreferences.h
        shell/settings/ccpreferences.cpp
@@ -2109,9 +1785,9 @@ Files: debugger/breakpoint/breakpoint.cpp
        shell/workingsets/closedworkingsetswidget.cpp
        shell/workingsets/closedworkingsetswidget.h
        shell/workingsets/workingset.cpp
+       shell/workingsets/workingset.h
        shell/workingsets/workingsetfilelabel.cpp
        shell/workingsets/workingsetfilelabel.h
-       shell/workingsets/workingset.h
        shell/workingsets/workingsethelpers.cpp
        shell/workingsets/workingsethelpers.h
        shell/workingsets/workingsettoolbutton.cpp
@@ -2141,10 +1817,10 @@ Files: debugger/breakpoint/breakpoint.cpp
        sublime/examples/example2main.h
        sublime/mainwindow.cpp
        sublime/mainwindow.h
-       sublime/mainwindowoperator.cpp
-       sublime/mainwindowoperator.h
        sublime/mainwindow_p.cpp
        sublime/mainwindow_p.h
+       sublime/mainwindowoperator.cpp
+       sublime/mainwindowoperator.h
        sublime/sublimedefs.cpp
        sublime/sublimedefs.h
        sublime/sublimeexport.h
@@ -2174,7 +1850,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        sublime/view.h
        template/filters/kdevfilters.cpp
        template/filters/kdevfilters.h
-       tests/autotestshell.h
        tests/kdevplatformtestsexport.h
        tests/kdevsignalspy.cpp
        tests/kdevsignalspy.h
@@ -2208,7 +1883,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        util/focusedtreeview.h
        util/formattinghelpers.cpp
        util/formattinghelpers.h
-       util/google/hash_fun.h
        util/kdevplatform_shell_environment.sh
        util/kdevstringhandler.h
        util/kdevvarlengtharray.h
@@ -2228,12 +1902,12 @@ Files: debugger/breakpoint/breakpoint.cpp
        util/spinlock.h
        util/utilexport.h
        vcs/dvcs/dvcsevent.h
-       vcs/dvcs/ui/logview.cpp
-       vcs/dvcs/ui/logview.h
        vcs/interfaces/ibasicversioncontrol.cpp
        vcs/interfaces/ibasicversioncontrol.h
        vcs/interfaces/ibranchingversioncontrol.h
        vcs/interfaces/ibrowsableversioncontrol.h
+       vcs/interfaces/icontentawareversioncontrol.cpp
+       vcs/interfaces/icontentawareversioncontrol.h
        vcs/interfaces/idistributedversioncontrol.h
        vcs/interfaces/irepositoryversioncontrol.h
        vcs/models/vcsannotationmodel.cpp
@@ -2265,8 +1939,6 @@ Files: debugger/breakpoint/breakpoint.cpp
        vcs/widgets/flexibleaction.h
        vcs/widgets/standardvcslocationwidget.cpp
        vcs/widgets/standardvcslocationwidget.h
-       vcs/widgets/vcsannotationwidget.cpp
-       vcs/widgets/vcsannotationwidget.h
        vcs/widgets/vcscommitdialog.cpp
        vcs/widgets/vcscommitdialog.h
        vcs/widgets/vcsdiffwidget.cpp
@@ -2304,8 +1976,8 @@ Copyright: 1994, 1996-1998, 2001, 2002, 2003, 2004, 2005 Free Software Foundatio
            2004-2005 Sascha Cunz <sascha@kdevelop.org>
            2005 Ian Reinhart Geiser <ian@geiseri.com>
            2006 Matt Rogers <mattr@kde.org
-           2006-2008 Vladimir Prus <ghost@cs.msu.su>
-           2006-2010 Andreas Pakulat <apaku@gmx.de>
+           2006-2009 Vladimir Prus <ghost@cs.msu.su>
+           2006-2010, 2013 Andreas Pakulat <apaku@gmx.de>
            2006-2011 David Nolden <david.nolden.kde@art-master.de>, <david.nolden.kdevelop@art-master.de>
            2007 Dukju Ahn <dukjuahn@gmail.com>
            2007 Matthew Woehlke <mw_triad@users.sourceforge.net>
@@ -2337,15 +2009,25 @@ Copyright: 1994, 1996-1998, 2001, 2002, 2003, 2004, 2005 Free Software Foundatio
            2012 Ivan Shapovalov <intelfx100@gmail.com>
            2012 Miha Čančula <miha@noughmad.eu>
            2012 Morten Danielsen Volden <mvolden2@gmail.com>
-           2012 Sven Brauch <svenbrauch@googlemail.com>
+           2012-2013 Sven Brauch <svenbrauch@googlemail.com>
+           2013 Jarosław Sierant <jaroslaw.sierant@gmail.com>
+           2013 Vlas Puhov <vlas.puhov@mail.ru>
+           2013 David E. Narvaez <david@piensalibre.net>
+           2014 Sergey Kalinichev <kalinichev.so.0@gmail.com>
 License: GPL-2+
 
 
 
-Files: sublime/ideal.h
+Files: sublime/idealbuttonbarwidget.cpp
+       sublime/idealbuttonbarwidget.h
+       sublime/idealcontroller.cpp
+       sublime/idealcontroller.h
+       sublime/idealdockwidget.cpp
+       sublime/idealdockwidget.h
        sublime/ideallayout.cpp
        sublime/ideallayout.h
-       sublime/ideal.cpp
+       sublime/idealtoolbutton.cpp
+       sublime/idealtoolbutton.h
 Copyright: 2007 Hamish Rodda <rodda@kde.org>
            2007 Roberto Raggi <roberto@kdevelop.org>
            2008 Vladimir Prus <ghost@cs.msu.su>
@@ -2393,23 +2075,32 @@ Files: debugger/interfaces/iframestackmodel.cpp
        plugins/genericprojectmanager/test/stresstest.php
        plugins/grepview/grepfindthread.cpp
        plugins/grepview/grepfindthread.h
-       shell/kross/dvcsadaptors.cpp
-       shell/kross/examples/bzrkdevelop/kdevbzr/kdevbzr.py
-       shell/kross/examples/compileone/CompileOne/CompileOne.py
-       shell/kross/examples/guiexample/GUIExample/GUIExample.py
-       shell/kross/examples/msvckdevelop/KDevMSVCManager/KDevMSVCManager.py
-       shell/kross/examples/msvckdevelop/KDevMSVCManager/main.py
-       shell/kross/examples/msvckdevelop/KDevMSVCManager/SolutionReader.py
-       shell/kross/examples/msvckdevelop/KDevMSVCManager/VCProjManager.py
        util/google/sparsehash/sparseconfig_windows.h
-       util/kdev_format_source.sh
 Copyright: no copyright holders stated
 Comment: given by default copyright file COPYING.SRC
 License: LGPL-2
 
 
 
-Files: plugins/filetemplates/templatepreview.cpp
+Files: language/codegen/tests/test_documentchangeset.cpp
+       language/codegen/tests/test_documentchangeset.h
+       language/duchain/tests/serialization/tst_indexedstring.cpp
+       language/duchain/tests/serialization/tst_indexedstring.h
+       language/duchain/tests/serialization/tst_itemrepository.cpp
+       language/duchain/tests/serialization/tst_itemrepository.h
+       plugins/bazaar/bazaarplugin.cpp
+       plugins/bazaar/bazaarplugin.h
+       plugins/bazaar/bazaarutils.cpp
+       plugins/bazaar/bazaarutils.h
+       plugins/bazaar/bzrannotatejob.cpp
+       plugins/bazaar/bzrannotatejob.h
+       plugins/bazaar/copyjob.cpp
+       plugins/bazaar/copyjob.h
+       plugins/bazaar/diffjob.cpp
+       plugins/bazaar/diffjob.h
+       plugins/bazaar/tests/bazaartest.cpp
+       plugins/bazaar/tests/bazaartest.h
+       plugins/filetemplates/templatepreview.cpp
        plugins/filetemplates/templatepreview.h
        plugins/git/gitclonejob.cpp
        plugins/git/gitclonejob.h
@@ -2417,36 +2108,52 @@ Files: plugins/filetemplates/templatepreview.cpp
        plugins/git/gitmessagehighlighter.h
        plugins/git/gitplugin.cpp
        plugins/git/gitplugin.h
-       plugins/git/tests/initTest.cpp
-       plugins/git/tests/initTest.h
+       plugins/git/gitplugincheckinrepositoryjob.cpp
+       plugins/git/gitplugincheckinrepositoryjob.h
+       plugins/git/tests/gittest.cpp
+       plugins/git/tests/gittest.h
+       plugins/projectfilter/comboboxdelegate.cpp
+       plugins/projectfilter/comboboxdelegate.h
+       plugins/projectfilter/filter.cpp
+       plugins/projectfilter/filter.h
+       plugins/projectfilter/filtermodel.cpp
+       plugins/projectfilter/filtermodel.h
+       plugins/projectfilter/projectfilter.cpp
+       plugins/projectfilter/projectfilter.h
+       plugins/projectfilter/projectfilterdebug.cpp
+       plugins/projectfilter/projectfilterdebug.h
+       plugins/projectfilter/projectfilterkcm.cpp
+       plugins/projectfilter/projectfilterkcm.h
+       plugins/projectfilter/projectfilterprovider.cpp
+       plugins/projectfilter/projectfilterprovider.h
+       plugins/projectfilter/tests/test_projectfilter.cpp
+       plugins/projectfilter/tests/test_projectfilter.h
        plugins/quickopen/tests/quickopenbench.cpp
        plugins/quickopen/tests/quickopenbench.h
        plugins/quickopen/tests/quickopentest.cpp
        plugins/quickopen/tests/quickopentest.h
        plugins/quickopen/tests/quickopentestbase.cpp
        plugins/quickopen/tests/quickopentestbase.h
+       util/placeholderitemproxymodel.cpp
+       util/placeholderitemproxymodel.h
        util/ssh_client/main.cpp
        util/ssh_client/main.h
-       vcs/dvcs/dvcsjob.cpp  GPL
+       util/tests/test_path.cpp
+       util/tests/test_path.h
+       vcs/dvcs/dvcsjob.cpp
        vcs/dvcs/dvcsjob.h
        vcs/dvcs/dvcsplugin.cpp
        vcs/dvcs/dvcsplugin.h
        vcs/dvcs/tests/dvcsjobTest.cpp
        vcs/dvcs/tests/dvcsjobTest.h
-       vcs/dvcs/ui/branchmanager.cpp
-       vcs/dvcs/ui/branchmanager.h
-       vcs/dvcs/ui/dvcsgenericoutputview.cpp
-       vcs/dvcs/ui/dvcsgenericoutputview.h
-       vcs/dvcs/ui/dvcsmainview.cpp
-       vcs/dvcs/ui/dvcsmainview.h
-       vcs/dvcs/ui/importdialog.cpp
-       vcs/dvcs/ui/importdialog.h
-       vcs/dvcs/ui/importmetadatawidget.cpp
-       vcs/dvcs/ui/importmetadatawidget.h
        vcs/dvcs/ui/revhistory/commitView.cpp
        vcs/dvcs/ui/revhistory/commitView.h
        vcs/dvcs/ui/revhistory/commitlogmodel.cpp
        vcs/dvcs/ui/revhistory/commitlogmodel.h
+       vcs/dvcs/ui/branchmanager.cpp
+       vcs/dvcs/ui/branchmanager.h
+       vcs/dvcs/ui/dvcsimportmetadatawidget.cpp
+       vcs/dvcs/ui/dvcsimportmetadatawidget.h
        vcs/interfaces/icentralizedversioncontrol.h
        vcs/models/brancheslistmodel.cpp
        vcs/models/brancheslistmodel.h
@@ -2464,166 +2171,12 @@ Copyright: 2002-2003 Christian Loose <christian.loose@hamburg.de>
            2010,2012 Aleix Pol Gonzalez <aleixpol@kde.org>
            2011 Andrey Batyiev <batyiev@gmail.com>
            2011 Sergey Vidyuk <sir.vestnik@gmail.com>
-           2012 Milian Wolff <mail@milianw.de>
+           2012-2013 Milian Wolff <mail@milianw.de>
+           2013 Kevin Funk <kfunk@kde.org>
+           2013-2014 Maciej Poleski
 License: GPL-2+ or any later version accepted by the membership of KDE e.V.
          (or its successor approved by the membership of KDE e.V.), which shall
          act as a proxy as defined in Section 14 of version 3 of the license.
-
-
-
-Files: outputview/ifilterstrategy.cpp
-       outputview/ifilterstrategy.h
-       outputview/outputfilteringstrategies.cpp
-       outputview/outputfilteringstrategies.h
-       outputview/tests/filteringstrategytest.cpp
-       outputview/tests/filteringstrategytest.h
-       outputview/tests/outputmodeltest.cpp
-       outputview/tests/outputmodeltest.h
-       outputview/tests/testlinebuilderfunctions.h
-Copyright: 2012 Milian Wolff <mail@milianw.de>
-           2012 Morten Danielsen Volden <mvolden2@gmail.com>
-Comment: Files relicensed upstream, see http://commits.kde.org/kdevplatform/fbed9bc2665de2ca23d51df51e065abb0838fa8b
-    From fbed9bc2665de2ca23d51df51e065abb0838fa8b Mon Sep 17 00:00:00 2001
-    From: Aleix Pol <aleixpol@kde.org>
-    Date: Fri, 7 Jun 2013 02:18:23 +0200
-    Subject: [PATCH 2/2] Fix licensing mistake in output view
-
-    Milian and Morten where the only two who contributed to it.
-
-    CCMAIL: mvolden2@gmail.com
-    CCMAIL: mail@milianw.de
-    ---
-    outputview/ifilterstrategy.cpp              |    2 +-
-    outputview/ifilterstrategy.h                |    2 +-
-    outputview/outputfilteringstrategies.cpp    |    2 +-
-    outputview/outputfilteringstrategies.h      |    2 +-
-    outputview/tests/filteringstrategytest.cpp  |    2 +-
-    outputview/tests/filteringstrategytest.h    |    2 +-
-    outputview/tests/outputmodeltest.cpp        |    2 +-
-    outputview/tests/outputmodeltest.h          |    2 +-
-    outputview/tests/testlinebuilderfunctions.h |    2 +-
-    9 files changed, 9 insertions(+), 9 deletions(-)
-
-    diff --git a/outputview/ifilterstrategy.cpp b/outputview/ifilterstrategy.cpp
-    index d740e7e..0ad2d06 100644
-    --- a/outputview/ifilterstrategy.cpp
-    +++ b/outputview/ifilterstrategy.cpp
-    @@ -4,7 +4,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/ifilterstrategy.h b/outputview/ifilterstrategy.h
-    index f98b531..5c05dcc 100644
-    --- a/outputview/ifilterstrategy.h
-    +++ b/outputview/ifilterstrategy.h
-    @@ -4,7 +4,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/outputfilteringstrategies.cpp b/outputview/outputfilteringstrategies.cpp
-    index 9e526bd..9e7f474 100644
-    --- a/outputview/outputfilteringstrategies.cpp
-    +++ b/outputview/outputfilteringstrategies.cpp
-    @@ -4,7 +4,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/outputfilteringstrategies.h b/outputview/outputfilteringstrategies.h
-    index f92c5a0..c5f271a 100644
-    --- a/outputview/outputfilteringstrategies.h
-    +++ b/outputview/outputfilteringstrategies.h
-    @@ -4,7 +4,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/tests/filteringstrategytest.cpp b/outputview/tests/filteringstrategytest.cpp
-    index a6e0bb4..dfc7c0e 100644
-    --- a/outputview/tests/filteringstrategytest.cpp
-    +++ b/outputview/tests/filteringstrategytest.cpp
-    @@ -5,7 +5,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/tests/filteringstrategytest.h b/outputview/tests/filteringstrategytest.h
-    index 9f04503..a63bf31 100644
-    --- a/outputview/tests/filteringstrategytest.h
-    +++ b/outputview/tests/filteringstrategytest.h
-    @@ -4,7 +4,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/tests/outputmodeltest.cpp b/outputview/tests/outputmodeltest.cpp
-    index ddbe04c..6f8e9fa 100644
-    --- a/outputview/tests/outputmodeltest.cpp
-    +++ b/outputview/tests/outputmodeltest.cpp
-    @@ -5,7 +5,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/tests/outputmodeltest.h b/outputview/tests/outputmodeltest.h
-    index a8de3d0..b733404 100644
-    --- a/outputview/tests/outputmodeltest.h
-    +++ b/outputview/tests/outputmodeltest.h
-    @@ -5,7 +5,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    diff --git a/outputview/tests/testlinebuilderfunctions.h b/outputview/tests/testlinebuilderfunctions.h
-    index 72334ec..2ab9e60 100644
-    --- a/outputview/tests/testlinebuilderfunctions.h
-    +++ b/outputview/tests/testlinebuilderfunctions.h
-    @@ -4,7 +4,7 @@
-    
-        This program is free software: you can redistribute it and/or modify
-        it under the terms of the GNU General Public License as published by
-    -    the Free Software Foundation, either version 3 of the License, or
-    +    the Free Software Foundation, either version 2 of the License, or
-        (at your option) any later version.
-    
-        This program is distributed in the hope that it will be useful,
-    -- 
-    1.7.10.4
-License: GPL-2+
 
 
 
@@ -2655,9 +2208,9 @@ Files: plugins/subversion/kdevsvncpp/annotate_line.hpp
        plugins/subversion/kdevsvncpp/log_entry.cpp
        plugins/subversion/kdevsvncpp/log_entry.hpp
        plugins/subversion/kdevsvncpp/map_wrapper.hpp
-       plugins/subversion/kdevsvncpp/path.cpp 
-       plugins/subversion/kdevsvncpp/path.hpp 
-       plugins/subversion/kdevsvncpp/pool.cpp 
+       plugins/subversion/kdevsvncpp/path.cpp
+       plugins/subversion/kdevsvncpp/path.hpp
+       plugins/subversion/kdevsvncpp/pool.cpp
        plugins/subversion/kdevsvncpp/pool.hpp
        plugins/subversion/kdevsvncpp/property.cpp
        plugins/subversion/kdevsvncpp/property.hpp
@@ -2683,19 +2236,36 @@ License: GPL-3+
 
 
 
-Files: util/google/type_traits.h
-       util/google/sparsehash/sparsehashtable.h
-       util/google/sparsehash/densehashtable.h
-Copyright: 2005-2006 Google Inc.
-License: BSD-3-clause
-
-
-
 Files: language/duchain/types/typepointer.h
 Copyright: 2007-2008 David Nolden <david.nolden.kdevelop@art-master.de>
            2005 Frerich Raabe <raabe@kde.org>
 License: BSD-2-clause
 
+
+
+Files: interfaces/isessionlock.cpp
+       interfaces/isessionlock.h
+       shell/sessionlock.cpp
+       shell/sessionlock.h
+       util/path.cpp
+       util/path.h
+Copyright: 2012-2013 Milian Wolff <mail@milianw.de>
+License: LGPL-2.1 or LGPL-3 or eV exception
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) version 3, or any
+ later version accepted by the membership of KDE e.V. (or its
+ successor approved by the membership of KDE e.V.), which shall
+ act as a proxy defined in Section 6 of version 3 of the license.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 
 
 KDevelop Platform Libraries License:
@@ -2743,4 +2313,3 @@ The Debian packaging is:
     Copyright (C) 2012-2013, Andreas Cord-Landwehr <cola@uni-paderborn.de>
 
 and is licensed under the GPL, see above.
-

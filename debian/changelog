@@ -1,8 +1,60 @@
+kdevplatform (1.7.0-2ubuntu1) vivid; urgency=low
+
+  * Merge from Debian unstable.  Remaining changes:
+    - debian/tests/*, debian/control:
+      + Add autopkgtest.
+    - debian/control:
+      + Replaces/Breaks kdevplatform6-libs.
+    - debian/patches/excludeSvnPluginFromCompilation.diff,
+      debian/kdevplatform8-libs.install, debian/control:
+      + Do not compile incompatible licensed SVN plugin.
+
+ -- Artur Rona <ari-tczew@ubuntu.com>  Fri, 07 Nov 2014 09:14:53 +0100
+
+kdevplatform (1.7.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable (see #759494).
+
+ -- Pino Toscano <pino@debian.org>  Tue, 23 Sep 2014 21:53:54 +0200
+
+kdevplatform (1.7.0-1) experimental; urgency=medium
+
+  * New upstream release.
+
+  [ Andreas Cord-Landwehr ]
+  * Rename packages due to soname bump:
+    - kdevplatform7-libs -> kdevplatform8-libs
+    - libsublime7 -> libsublime8
+  * Update install files.
+  * Update copyright.
+
+  [ Pino Toscano ]
+  * Update copyright.
+  * Update install files.
+  * Bump the debhelper compatibility to 9:
+    - bump compat to 9
+    - bump the debhelper build dependency to 9
+  * Convert rules to the dh sequencer with kde addon.
+  * Remove unused cdbs build dependency.
+
+  [ Sune Vuorela ]
+  * Switch a script to /bin/bash - it uses bash specific features.
+
+ -- Sune Vuorela <sune@debian.org>  Fri, 19 Sep 2014 23:42:58 +0200
+
 kdevplatform (1.7.0-0ubuntu0.2) trusty; urgency=medium
 
   * fixed issue about missing config-kdevplatform.h
 
  -- Andreas Roth <aroth@arsoft-online.com>  Tue, 16 Sep 2014 08:23:36 +0200
+
+kdevplatform (1.7.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+  * Add XS-Testsuite: autopkgtest
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Sat, 30 Aug 2014 03:52:11 -0700
 
 kdevplatform (1.7.0-0ubuntu0.1) trusty; urgency=medium
 
@@ -61,6 +113,58 @@ kdevplatform (1.5.60-0ubuntu2) raring; urgency=low
   * new upstream release (prepare for 1.6 release)
 
  -- Andreas Roth <aroth@arsoft-online.com>  Mon, 19 Aug 2013 23:21:47 +0200
+
+kdevplatform (1.5.2-1) unstable; urgency=low
+
+  * Team upload.
+  * New upstream release.
+
+  [ Andreas Cord-Landwehr ]
+  * Re-enable GPL-3+ licensed SVN plugin due to fixed license issue in
+    GPL-2+ licensed shared library kdevplatformoutputview (was GPL-2)
+    (Closes: #719202)
+  * Add libsvn-dev build dependency: needed for SVN plugin.
+  * Update install files.
+  * Update copyright.
+  * Bump Standards-Version to 3.9.5: no changes needed.
+  * Update debian/watch file to track xz compressed tarballs.
+
+  [ Pino Toscano ]
+  * kdevplatform7-libs.install: do not hardcode the minor grantlee version.
+  * Update Vcs-* headers.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 18 Jan 2014 09:50:09 +0100
+
+kdevplatform (1.5.2-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+  * Update watch file to use xz instead of bz2
+  * Update install files
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 04 Nov 2013 15:42:30 +0100
+
+kdevplatform (1.5.1-2) unstable; urgency=low
+
+  * Team upload. Upload to unstable.
+
+ -- Pino Toscano <pino@debian.org>  Fri, 06 Sep 2013 14:30:21 +0200
+
+kdevplatform (1.5.1-1) experimental; urgency=low
+
+  [ Andreas Cord-Landwehr ]
+  * New upstream release
+  * Rename packages due to soname bump:
+    - kdevplatform5-libs -> kdevplatform7-libs
+    - libsublime5 -> libsublime7
+  * Add build dependency to libgrantlee-dev (>= 0.1.7)
+  * Raise kdelibs5-dev build-dependency (>=4:4.7.0)
+  * Bump Standards-Version to 3.9.4: no changes needed.
+  * Update copyright.
+  * Disable compilation of SVN plugin due to license
+    incompatability: patches/excludeSvnPluginFromCompilation.diff
+  * Remove libsvn-dev build dependency: only needed for SVN plugin.
+
+ -- Sune Vuorela <sune@debian.org>  Fri, 28 Jun 2013 09:22:12 +0200
 
 kdevplatform (1.5.1-0ubuntu1) saucy; urgency=low
 
