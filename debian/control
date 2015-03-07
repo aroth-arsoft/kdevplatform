@@ -13,6 +13,7 @@ Build-Depends: cmake (>= 2.8.0),
                libboost-serialization-dev,
                libgrantlee-dev (>= 0.1.7),
                libqjson-dev,
+               libsvn-dev,
                libqtwebkit-dev,
                pkg-kde-tools (>= 0.9.0)
 Standards-Version: 3.9.5
@@ -38,7 +39,8 @@ Breaks: kdevplatform1-libs,
         kdevplatform5-libs,
         kdevplatform6-libs,
         kdevplatform7-libs
-Suggests: cvs, git, kdevplatform-l10n, konsole
+Recommends: konsole4-kpart
+Suggests: cvs, git, kdevplatform-l10n
 Description: shared libraries for the KDevelop platform
  This package contains shared libraries needed to run integrated development
  environments based on the KDevelop platform.

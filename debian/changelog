@@ -1,3 +1,10 @@
+kdevplatform (1.7.1-0ubuntu0.1+gitfc4cc0b) vivid; urgency=medium
+
+  * new upstream release 1.7.1
+  * include latest changes from 1.7 branch
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sat, 07 Mar 2015 18:19:55 +0100
+
 kdevplatform (1.7.0-2ubuntu1.1+git36f0cd0) utopic; urgency=medium
 
   * integrate latest changes from branch 1.7

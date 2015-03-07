@@ -144,3 +144,8 @@ usr/share/kde4/services/kdevtemplatemanager_config.desktop
 usr/share/kde4/services/kdevtestview.desktop
 usr/share/kde4/services/kdevvcschangesview.desktop
 usr/share/kde4/servicetypes/kdevelopplugin.desktop
+usr/lib/kde4/kdevsubversion.so
+usr/share/kde4/services/kdevsubversion.desktop
+usr/share/icons/hicolor/16x16/apps/subversion.png
+usr/share/icons/hicolor/32x32/apps/subversion.png
+usr/share/icons/hicolor/64x64/apps/subversion.png

@@ -1,0 +1,135 @@
+diff --git a/plugins/documentswitcher/kdevdocumentswitcher.desktop.cmake b/plugins/documentswitcher/kdevdocumentswitcher.desktop.cmake
+index 59e1e95..7d49501 100644
+--- a/plugins/documentswitcher/kdevdocumentswitcher.desktop.cmake
++++ b/plugins/documentswitcher/kdevdocumentswitcher.desktop.cmake
+@@ -4,7 +4,7 @@ Icon=document-open-recent
+ Exec=blubb
+ Comment=A most-recently-used document switcher for KDevPlatform.
+ Comment[bg]=Последен използван превключвател на документи за KDevPlatform.
+-Comment[bs]=Mjenjač zadnjeg korištenog dokumenta za KDevPlatformu
++Comment[bs]=Mjenjač zadnjeg korištenog dokumenta za KDevPlatformu.
+ Comment[ca]=Un commutador del document usat més recentment per KDevPlatform.
+ Comment[ca@valencia]=Un commutador del document usat més recentment per KDevPlatform.
+ Comment[da]=En dokumentskifter til nyligt anvendte til KDevPlatform.
+diff --git a/plugins/executescript/kdevexecutescript.desktop.cmake b/plugins/executescript/kdevexecutescript.desktop.cmake
+index d0caf37..97734a7 100644
+--- a/plugins/executescript/kdevexecutescript.desktop.cmake
++++ b/plugins/executescript/kdevexecutescript.desktop.cmake
+@@ -3,7 +3,7 @@ Type=Service
+ Icon=system-run
+ Exec=blubb
+ Comment=This plugin allows running of scripts.
+-Comment[bs]=Ovaj dodatak dopušta pogretanje skripti
++Comment[bs]=Ovaj dodatak dopušta pogretanje skripti.
+ Comment[ca]=Aquest connector permet executar scripts.
+ Comment[ca@valencia]=Este connector permet executar scripts.
+ Comment[da]=Dette plugin lader dig køre scripts.
+diff --git a/plugins/externalscript/kdevexternalscript.desktop.cmake b/plugins/externalscript/kdevexternalscript.desktop.cmake
+index 33ff944..f5c4cba 100644
+--- a/plugins/externalscript/kdevexternalscript.desktop.cmake
++++ b/plugins/externalscript/kdevexternalscript.desktop.cmake
+@@ -3,7 +3,7 @@ Type=Service
+ Icon=system-run
+ Exec=
+ Comment=Run external scripts or applications to manipulate the editor contents or do other arbitrary actions.
+-Comment[bs]=Pokreni spoljne skripte ili aplikacija za manipulaciju sadržaja uređivačak ili  druge proizvoljne radnje.
++Comment[bs]=Pokreni spoljne skripte ili aplikacija za manipulaciju sadržaja uređivača ili  druge proizvoljne radnje.
+ Comment[ca]=Executa scripts externs o aplicacions per a manipular el contingut de l'editor o altres accions arbitràries.
+ Comment[ca@valencia]=Executa scripts externs o aplicacions per a manipular el contingut de l'editor o altres accions arbitràries.
+ Comment[da]=Kør eksterne scripts eller programmer til manipulering af editor-indholdet eller foretag andre handlinger.
+diff --git a/plugins/pastebin/kdevpastebin.desktop.cmake b/plugins/pastebin/kdevpastebin.desktop.cmake
+index 04f6320..8573b03 100644
+--- a/plugins/pastebin/kdevpastebin.desktop.cmake
++++ b/plugins/pastebin/kdevpastebin.desktop.cmake
+@@ -57,7 +57,7 @@ Name[nb]=Pastebin
+ Name[nds]=Pastebin
+ Name[nl]=Pastebin
+ Name[pl]=Pastebin
+-Name[pt]=Colagem
++Name[pt]=Pastebin
+ Name[pt_BR]=Colagem
+ Name[ru]=Pastebin
+ Name[sk]=Pastebin
+diff --git a/plugins/projectfilter/kcm_kdevprojectfilter.desktop b/plugins/projectfilter/kcm_kdevprojectfilter.desktop
+index 601ed9f..95fcc10 100644
+--- a/plugins/projectfilter/kcm_kdevprojectfilter.desktop
++++ b/plugins/projectfilter/kcm_kdevprojectfilter.desktop
+@@ -11,7 +11,7 @@ X-KDE-ParentComponents=KDevProjectFilter
+ X-KDE-CfgDlgHierarchy=GENERAL
+ 
+ Name=Project Filter
+-Name[bs]=Projekt Filter
++Name[bs]=Filter projekta
+ Name[ca]=Filtre de projecte
+ Name[ca@valencia]=Filtre de projecte
+ Name[cs]=Filtr projektů
+@@ -39,7 +39,7 @@ Name[uk]=Фільтр проекту
+ Name[x-test]=xxProject Filterxx
+ Name[zh_TW]=專案過濾器
+ Comment=Configure which files and folders inside the project folder should be included or excluded.
+-Comment[bs]=Konfiguriši koje datoteke i direktoriji unutar projekta trebaju biti uključeni ili isključeni.
++Comment[bs]=Konfiguriši koje datoteke i koji direktoriji unutar foldera projekta trebaju biti uključeni ili isključeni.
+ Comment[ca]=Configura quins fitxers i carpetes dins de la carpeta del projecte s'han d'incloure o excloure.
+ Comment[ca@valencia]=Configura quins fitxers i carpetes dins de la carpeta del projecte s'han d'incloure o excloure.
+ Comment[da]=Indstil hvilke filer og mapper i projektmappen der skal medtages eller undtages.
+diff --git a/plugins/projectfilter/kdevprojectfilter.desktop.cmake b/plugins/projectfilter/kdevprojectfilter.desktop.cmake
+index cc17561..ca89eca 100644
+--- a/plugins/projectfilter/kdevprojectfilter.desktop.cmake
++++ b/plugins/projectfilter/kdevprojectfilter.desktop.cmake
+@@ -16,7 +16,7 @@ X-KDevelop-Mode=GUI
+ X-KDevelop-LoadMode=AlwaysOn
+ 
+ Name=Project Filter
+-Name[bs]=Projekt Filter
++Name[bs]=Filter projekta
+ Name[ca]=Filtre de projecte
+ Name[ca@valencia]=Filtre de projecte
+ Name[cs]=Filtr projektů
+@@ -44,7 +44,7 @@ Name[uk]=Фільтр проекту
+ Name[x-test]=xxProject Filterxx
+ Name[zh_TW]=專案過濾器
+ Comment=Configure which files and folders inside the project folder should be included or excluded.
+-Comment[bs]=Konfiguriši koje datoteke i direktoriji unutar projekta trebaju biti uključeni ili isključeni.
++Comment[bs]=Konfiguriši koje datoteke i koji direktoriji unutar foldera projekta trebaju biti uključeni ili isključeni.
+ Comment[ca]=Configura quins fitxers i carpetes dins de la carpeta del projecte s'han d'incloure o excloure.
+ Comment[ca@valencia]=Configura quins fitxers i carpetes dins de la carpeta del projecte s'han d'incloure o excloure.
+ Comment[da]=Indstil hvilke filer og mapper i projektmappen der skal medtages eller undtages.
+diff --git a/plugins/projectmanagerview/kdevprojectmanagerview.desktop.cmake b/plugins/projectmanagerview/kdevprojectmanagerview.desktop.cmake
+index e8ab207..76b062e 100644
+--- a/plugins/projectmanagerview/kdevprojectmanagerview.desktop.cmake
++++ b/plugins/projectmanagerview/kdevprojectmanagerview.desktop.cmake
+@@ -2,7 +2,7 @@
+ Type=Service
+ Exec=blubb
+ Comment=Lets you manage the project contents.
+-Comment[bs]=Omogućava vam upravljanje sadržajem projekta
++Comment[bs]=Omogućava vam upravljanje sadržajem projekta.
+ Comment[ca]=Us permet gestionar els continguts del projecte.
+ Comment[ca@valencia]=Vos permet gestionar els continguts del projecte.
+ Comment[da]=Lader dig håndtere projektets indhold.
+diff --git a/plugins/switchtobuddy/kdevswitchtobuddy.desktop.cmake b/plugins/switchtobuddy/kdevswitchtobuddy.desktop.cmake
+index ed144f4..f5741d9 100644
+--- a/plugins/switchtobuddy/kdevswitchtobuddy.desktop.cmake
++++ b/plugins/switchtobuddy/kdevswitchtobuddy.desktop.cmake
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Type=Service
+ Comment=Allows switching between buddy documents like implementation and header file.
+-Comment[bs]=Dopušta prebacivanje između prijatelj-dokumenata, poput datoteke zaglavlja i implementacije
++Comment[bs]=Dopušta prebacivanje između prijatelj-dokumenata, poput datoteke zaglavlja i implementacije.
+ Comment[ca]=Permet commutar entre document associats com fitxers d'implementacions i de capçaleres.
+ Comment[ca@valencia]=Permet commutar entre document associats com fitxers d'implementacions i de capçaleres.
+ Comment[da]=Muliggør skift mellem buddy-dokumenter såsom implementations- og headerfil.
+diff --git a/plugins/testview/kdevtestview.desktop.cmake b/plugins/testview/kdevtestview.desktop.cmake
+index 9d51bc1..a1cc756 100644
+--- a/plugins/testview/kdevtestview.desktop.cmake
++++ b/plugins/testview/kdevtestview.desktop.cmake
+@@ -2,7 +2,7 @@
+ Type=Service
+ Exec=blubb
+ Comment=Lets you see and run unit tests.
+-Comment[bs]=Omogućava da vidite i iztvršite testove jedinica
++Comment[bs]=Omogućava da vidite i iztvršite testove jedinica.
+ Comment[ca]=Us permet veure i executar proves unitàries.
+ Comment[ca@valencia]=Vos permet veure i executar proves unitàries.
+ Comment[da]=Lader dig se og køre enhedstester.
