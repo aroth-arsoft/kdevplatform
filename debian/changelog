@@ -1,4 +1,36 @@
-kdevplatform (1.7.1-0ubuntu0.1+gitfc4cc0b) vivid; urgency=medium
+kdevplatform (1.7.1-0ubuntu2.1+gitfc4cc0b) vivid; urgency=medium
+
+  * sync with ubuntu release
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Thu, 12 Mar 2015 06:41:52 +0100
+
+kdevplatform (1.7.1-0ubuntu2) vivid; urgency=medium
+
+  * Version bump due to bad upload.. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Mar 2015 21:09:35 -0700
+
+kdevplatform (1.7.1-0ubuntu1) vivid; urgency=medium
+
+  * Release to Archive 
+  * Fix version
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Mar 2015 19:01:14 -0700
+
+kdevplatform (1.7.1-0ubuntu2) utopic; urgency=medium
+
+  * Utopic backport 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 09 Mar 2015 07:49:36 -0700
+
+kdevplatform (1.7.1-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release 
+  * Removed fix_shell_script fixed upstream. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Thu, 19 Feb 2015 10:14:30 -0800
+
+kdevplatform (1.7.1-0ubuntu0.1.1+gitfc4cc0b) utopic; urgency=medium
 
   * new upstream release 1.7.1
   * include latest changes from 1.7 branch
@@ -10,6 +42,19 @@ kdevplatform (1.7.0-2ubuntu1.1+git36f0cd0) utopic; urgency=medium
   * integrate latest changes from branch 1.7
 
  -- Andreas Roth <aroth@arsoft-online.com>  Mon, 17 Nov 2014 18:54:31 +0100
+
+kdevplatform (1.7.0-2ubuntu3) vivid; urgency=medium
+
+  * Drop excludeSvnPluginFromCompilation.diff which has been dropped
+    from Debian LP: #1415451
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 28 Jan 2015 13:12:00 +0100
+
+kdevplatform (1.7.0-2ubuntu2) vivid; urgency=medium
+
+  * Recommends konsole4-kpart not suggests konsole
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 04 Dec 2014 16:16:18 +0100
 
 kdevplatform (1.7.0-2ubuntu1) vivid; urgency=low
 
