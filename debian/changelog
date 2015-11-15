@@ -1,3 +1,16 @@
+kdevplatform (1.7.2-0ubuntu1.1~aroth~ppa1) wily; urgency=medium
+
+  * build latest version
+
+ -- Andreas Roth <aroth@arsoft-online.com>  Sun, 15 Nov 2015 14:12:01 +0100
+
+kdevplatform (1.7.2-0ubuntu1~ubuntu15.10~ppa1) wily; urgency=medium
+
+  * Final 4 series bugfix release. 
+  * Fix version cruft. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Nov 2015 08:45:45 -0800
+
 kdevplatform (1.7.1-0ubuntu2.1+gitfc4cc0b) vivid; urgency=medium
 
   * sync with ubuntu release
